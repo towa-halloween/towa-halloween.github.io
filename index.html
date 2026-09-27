@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ハロウィン村バル 2026｜十和</title>
+<meta name="description" content="2026年10月31日（土）11:00スタート。十和地域振興局駐車場で、仮装パレード・キャラステージ・バル。どなたでも参加OK、参加無料。">
+<meta property="og:title" content="ハロウィン村バル 2026｜十和">
+<meta property="og:description" content="10月31日（土）11:00スタート。どなたでも参加OK・参加無料。仮装して十川商店筋を練り歩こう！">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://towa-halloween.github.io/">
+<meta name="theme-color" content="#1c1233">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Zen+Maru+Gothic:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --night: #1c1233;
+    --night-2: #2a1b4a;
+    --moon: #ffb347;
+    --pumpkin: #ff7a1a;
+    --ink: #fff8ee;
+    --mute: #cbbfe3;
+    --card: rgba(255, 255, 255, .07);
+    --line: rgba(255, 255, 255, .16);
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--night);
+    color: var(--ink);
+    font-family: "Zen Maru Gothic", system-ui, sans-serif;
+    font-weight: 500;
+    line-height: 1.8;
+  }
+  .pop { font-family: "Mochiy Pop One", "Zen Maru Gothic", sans-serif; font-weight: 400; }
+  a { color: var(--moon); }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 0 16px; }
+
+  .hero {
+    position: relative;
+    overflow: hidden;
+    padding: 56px 0 64px;
+    text-align: center;
+    background:
+      radial-gradient(1.5px 1.5px at 12% 18%, #fff 50%, transparent 51%),
+      radial-gradient(1px 1px at 28% 62%, #fff 50%, transparent 51%),
+      radial-gradient(1.5px 1.5px at 78% 12%, #fff 50%, transparent 51%),
+      radial-gradient(1px 1px at 88% 48%, #fff 50%, transparent 51%),
+      radial-gradient(1px 1px at 55% 8%, #fff 50%, transparent 51%),
+      radial-gradient(1.5px 1.5px at 8% 80%, #fff 50%, transparent 51%),
+      linear-gradient(180deg, var(--night-2), var(--night));
+  }
+  .moon {
+    position: absolute;
+    top: -90px; left: 50%;
+    width: 360px; height: 360px;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    background: radial-gradient(circle at 40% 40%, #ffd28a, var(--moon) 60%, #f09a2c);
+    box-shadow: 0 0 80px rgba(255, 179, 71, .45);
+    opacity: .95;
+  }
+  .hero-inner { position: relative; }
+  .kicker { margin: 0 0 8px; font-size: 15px; letter-spacing: .15em; color: var(--night); }
+  h1 {
+    margin: 0;
+    font-size: clamp(40px, 12vw, 72px);
+    line-height: 1.15;
+    color: var(--night);
+  }
+  .year { display: block; font-size: .55em; margin-top: 4px; }
+  .ghost {
+    display: block;
+    width: 72px; height: auto;
+    margin: 36px auto 8px;
+    animation: float 3.2s ease-in-out infinite;
+  }
+  @keyframes float { 50% { transform: translateY(-10px); } }
+  @media (prefers-reduced-motion: reduce) { .ghost { animation: none; } }
+  .date { margin: 0; font-size: clamp(34px, 10vw, 52px); line-height: 1.2; color: var(--moon); }
+  .date small { font-size: .45em; margin-left: .2em; }
+  .time { margin: 4px 0 0; font-size: 20px; }
+  .place { margin: 12px 0 0; font-size: 17px; }
+  .place span { display: inline-block; color: var(--mute); font-size: 15px; }
+
+  .badges {
+    display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;
+    margin: 28px 0 0; padding: 0; list-style: none;
+  }
+  .badges li {
+    padding: 6px 16px;
+    border-radius: 999px;
+    background: var(--pumpkin);
+    color: #fff;
+    font-weight: 700;
+    font-size: 16px;
+  }
+
+  section { padding: 48px 0 8px; }
+  h2 {
+    margin: 0 0 20px;
+    font-size: 24px;
+    line-height: 1.4;
+    color: var(--moon);
+  }
+  .cards { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); }
+  .card {
+    padding: 14px;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    background: var(--card);
+  }
+  .card h3 { margin: 0 0 4px; font-size: 17px; line-height: 1.5; white-space: nowrap; }
+  .card p { margin: 0; color: var(--mute); font-size: 15px; }
+  .guests { display: grid; gap: 10px; }
+  .guests .card { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+  .guests h3 { margin: 0; font-size: 19px; }
+  .guests p { white-space: nowrap; }
+  .note { margin: 16px 0 0; color: var(--mute); font-size: 15px; }
+
+  .tips { margin: 0; padding: 0; list-style: none; display: grid; gap: 12px; }
+  .tips li {
+    padding: 16px;
+    border-left: 4px solid var(--pumpkin);
+    border-radius: 8px;
+    background: var(--card);
+  }
+  .tips strong { display: block; font-size: 17px; }
+
+  footer {
+    margin-top: 56px;
+    padding: 32px 0 48px;
+    border-top: 1px solid var(--line);
+    font-size: 15px;
+    color: var(--mute);
+  }
+  footer dl { margin: 0; display: grid; grid-template-columns: auto 1fr; gap: 4px 16px; }
+  footer dt { color: var(--ink); }
+  footer dd { margin: 0; }
+  .tel {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 20px;
+    border-radius: 999px;
+    border: 2px solid var(--moon);
+    color: var(--moon);
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  .coming { margin: 24px 0 0; font-size: 15px; }
+  .nb { display: inline-block; }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="moon" aria-hidden="true"></div>
+  <div class="wrap hero-inner">
+    <p class="kicker">十和のハロウィン</p>
+    <h1 class="pop">ハロウィン<br>村バル<span class="year">2026</span></h1>
+
+    <svg class="ghost" viewBox="0 0 80 96" aria-hidden="true">
+      <path d="M40 4C20 4 8 20 8 40v48l10-8 11 8 11-8 11 8 11-8 10 8V40C72 20 60 4 40 4z" fill="#fff"/>
+      <circle cx="30" cy="40" r="5" fill="#1c1233"/>
+      <circle cx="50" cy="40" r="5" fill="#1c1233"/>
+      <ellipse cx="40" cy="56" rx="6" ry="4" fill="#1c1233"/>
+    </svg>
+
+    <p class="date pop">10.31<small>SAT</small></p>
+    <p class="time">11:00 スタート</p>
+    <p class="place">十和地域振興局 駐車場<br><span>雨の日は役場ホール</span></p>
+
+    <ul class="badges">
+      <li>どなたでも参加OK</li>
+      <li>参加無料</li>
+      <li>申込不要</li>
+    </ul>
+  </div>
+</header>
+
+<main class="wrap">
+  <section>
+    <h2 class="pop">当日のおたのしみ</h2>
+    <div class="cards">
+      <div class="card"><h3>仮装パレード</h3><p>仮装して十川商店筋を練り歩こう</p></div>
+      <div class="card"><h3>バル</h3><p>おいしい出店でごはん</p></div>
+      <div class="card"><h3>キャラステージ</h3><p>ゲストのキャラクターたちと遊ぼう</p></div>
+      <div class="card"><h3>仮装グランプリ</h3><p>いちばんの仮装はだれ？</p></div>
+    </div>
+    <p class="note">くわしい時間割は準備中です。</p>
+  </section>
+
+  <section>
+    <h2 class="pop">ゲストがやってくる！</h2>
+    <div class="guests">
+      <div class="card"><h3>のぼりんとたけぽん</h3><p>十和</p></div>
+      <div class="card"><h3>はりまとやばし</h3><p>高知市</p></div>
+      <div class="card"><h3>うまのすけっぴ</h3><p>海洋堂</p></div>
+      <div class="card"><h3>ししとう家族</h3><p>三原村</p></div>
+    </div>
+    <p class="note">ゲストの紹介は、このページで近日公開します。</p>
+  </section>
+
+  <section>
+    <h2 class="pop">来る前に</h2>
+    <ul class="tips">
+      <li><strong>仮装して来てね！</strong>役場2Fで着替えられます（10:30〜）</li>
+      <li><strong>お菓子はなくなり次第終了です</strong><span class="nb">お早めにどうぞ。</span></li>
+    </ul>
+  </section>
+
+  <footer>
+    <dl>
+      <dt>主催</dt><dd>地域おこし協力隊 大野・国沢</dd>
+      <dt>協力</dt><dd>十川商店筋、育つ会とおわ</dd>
+      <dt>問い合わせ</dt><dd>十和地域振興局</dd>
+    </dl>
+    <a class="tel" href="tel:0880285111">0880-28-5111</a>
+    <p class="coming">くわしい情報は、準備ができしだい<span class="nb">このページでお知らせします。</span></p>
+  </footer>
+</main>
+
+</body>
+</html>
