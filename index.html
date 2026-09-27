@@ -9,218 +9,689 @@
 <meta property="og:description" content="10月31日（土）11:00スタート。どなたでも参加OK・参加無料。仮装して十川商店筋を練り歩こう！">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://towa-halloween.github.io/">
-<meta name="theme-color" content="#1c1233">
+<meta name="theme-color" content="#080b0f">
+
+<!-- Google Fonts: Shippori Mincho & Zen Kaku Gothic New -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Zen+Maru+Gothic:wght@500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700;800&family=Zen+Kaku+Gothic+New:wght@500;700&display=swap" rel="stylesheet">
+
 <style>
   :root {
-    --night: #1c1233;
-    --night-2: #2a1b4a;
-    --moon: #ffb347;
-    --pumpkin: #ff7a1a;
-    --ink: #fff8ee;
-    --mute: #cbbfe3;
-    --card: rgba(255, 255, 255, .07);
-    --line: rgba(255, 255, 255, .16);
+    --void: #080b0f;
+    --night: #0d131a;
+    --night-blue: #121c26;
+    --indigo: #1a2b38;
+    --paper: #f2ece1;
+    --paper-mute: #9aa8b5;
+    --moon: #f39c12;
+    --moon-glow: #e67e22;
+    --moon-light: #ffd48a;
+    --vermilion: #d8382b;
+    --vermilion-glow: rgba(216, 56, 43, 0.45);
+    --gold: #d4a359;
+    --gold-border: rgba(212, 163, 89, 0.28);
+    --card-bg: rgba(18, 28, 38, 0.82);
+    --card-border: rgba(212, 163, 89, 0.2);
   }
+
   * { box-sizing: border-box; }
-  html { -webkit-text-size-adjust: 100%; }
+  html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; width: 100%; overflow-x: hidden; }
+
   body {
     margin: 0;
-    background: var(--night);
-    color: var(--ink);
-    font-family: "Zen Maru Gothic", system-ui, sans-serif;
+    width: 100%;
+    overflow-x: hidden;
+    background-color: var(--void);
+    color: var(--paper);
+    font-family: "Zen Kaku Gothic New", "Hiragino Mincho ProN", "Yu Mincho", serif;
     font-weight: 500;
-    line-height: 1.8;
+    line-height: 1.85;
+    position: relative;
   }
-  .pop { font-family: "Mochiy Pop One", "Zen Maru Gothic", sans-serif; font-weight: 400; }
-  a { color: var(--moon); }
-  .wrap { max-width: 720px; margin: 0 auto; padding: 0 16px; }
 
+  /* 和紙の微細グレインノイズ（背景オーバーレイ） */
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    pointer-events: none;
+    z-index: 999;
+    opacity: 0.045;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  }
+
+  /* フォント指定 */
+  .mincho {
+    font-family: "Shippori Mincho", "Yu Mincho", "Hiragino Mincho ProN", serif;
+  }
+
+  a { color: var(--gold); }
+  .wrap { width: 100%; max-width: 640px; margin: 0 auto; padding: 0 16px; position: relative; z-index: 2; }
+  .nb { display: inline-block; }
+
+  /* --------------------------------------
+     ヒーローセクション（和の夜・柿色の月・瑞雲）
+  ----------------------------------------- */
   .hero {
     position: relative;
     overflow: hidden;
-    padding: 56px 0 64px;
+    width: 100%;
+    padding: 50px 0 64px;
     text-align: center;
     background:
-      radial-gradient(1.5px 1.5px at 12% 18%, #fff 50%, transparent 51%),
-      radial-gradient(1px 1px at 28% 62%, #fff 50%, transparent 51%),
-      radial-gradient(1.5px 1.5px at 78% 12%, #fff 50%, transparent 51%),
-      radial-gradient(1px 1px at 88% 48%, #fff 50%, transparent 51%),
-      radial-gradient(1px 1px at 55% 8%, #fff 50%, transparent 51%),
-      radial-gradient(1.5px 1.5px at 8% 80%, #fff 50%, transparent 51%),
-      linear-gradient(180deg, var(--night-2), var(--night));
+      radial-gradient(1.2px 1.2px at 15% 15%, rgba(255,255,255,0.7) 50%, transparent 51%),
+      radial-gradient(1px 1px at 35% 55%, rgba(255,255,255,0.6) 50%, transparent 51%),
+      radial-gradient(1.5px 1.5px at 75% 20%, rgba(255,255,255,0.8) 50%, transparent 51%),
+      radial-gradient(1px 1px at 85% 65%, rgba(255,255,255,0.5) 50%, transparent 51%),
+      radial-gradient(1.2px 1.2px at 50% 10%, rgba(255,255,255,0.6) 50%, transparent 51%),
+      linear-gradient(180deg, #070a0e 0%, #0e1720 40%, #152432 75%, #080b0f 100%);
   }
+
+  /* 柿色の満月 */
   .moon {
     position: absolute;
-    top: -90px; left: 50%;
+    top: -130px; left: 50%;
     width: 360px; height: 360px;
     transform: translateX(-50%);
     border-radius: 50%;
-    background: radial-gradient(circle at 40% 40%, #ffd28a, var(--moon) 60%, #f09a2c);
-    box-shadow: 0 0 80px rgba(255, 179, 71, .45);
-    opacity: .95;
+    background: radial-gradient(circle at 45% 45%, var(--moon-light) 0%, var(--moon) 45%, var(--moon-glow) 80%, #a85210 100%);
+    box-shadow:
+      0 0 40px rgba(243, 156, 18, 0.45),
+      0 0 100px rgba(230, 126, 34, 0.35),
+      inset 0 0 45px rgba(168, 82, 16, 0.5);
+    opacity: 0.96;
+    animation: moonBreath 6s ease-in-out infinite alternate;
   }
-  .hero-inner { position: relative; }
-  .kicker { margin: 0 0 8px; font-size: 15px; letter-spacing: .15em; color: var(--night); }
+
+  @keyframes moonBreath {
+    0% { transform: translateX(-50%) scale(1); filter: brightness(1); }
+    100% { transform: translateX(-50%) scale(1.02); filter: brightness(1.06); }
+  }
+
+  /* 浮世絵風 瑞雲（SVG） */
+  .cloud {
+    position: absolute;
+    pointer-events: none;
+    opacity: 0.28;
+    fill: none;
+    stroke: var(--gold);
+    stroke-width: 1.2;
+    filter: drop-shadow(0 2px 8px rgba(0,0,0,0.6));
+  }
+  .cloud-left {
+    top: 60px; left: -20px;
+    width: 200px; height: 80px;
+    animation: cloudDriftL 14s ease-in-out infinite alternate;
+  }
+  .cloud-right {
+    top: 110px; right: -20px;
+    width: 220px; height: 90px;
+    animation: cloudDriftR 16s ease-in-out infinite alternate;
+  }
+
+  @keyframes cloudDriftL {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(14px); }
+  }
+  @keyframes cloudDriftR {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-14px); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .moon, .cloud { animation: none; }
+  }
+
+  .hero-inner { position: relative; z-index: 3; }
+
+  /* 落款・キッカー */
+  .kicker-wrap {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+    background: rgba(8, 11, 15, 0.72);
+    padding: 4px 14px;
+    border-radius: 999px;
+    border: 1px solid var(--gold-border);
+    backdrop-filter: blur(4px);
+  }
+  .kicker {
+    margin: 0;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    color: var(--moon-light);
+  }
+  .rakkan {
+    display: inline-block;
+    padding: 1px 5px;
+    background: var(--vermilion);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    border-radius: 2px;
+  }
+
+  /* タイトル */
   h1 {
     margin: 0;
-    font-size: clamp(40px, 12vw, 72px);
-    line-height: 1.15;
-    color: var(--night);
+    font-size: clamp(34px, 10vw, 60px);
+    font-weight: 800;
+    line-height: 1.18;
+    letter-spacing: 0.08em;
+    color: #fff;
+    text-shadow:
+      0 3px 12px rgba(0, 0, 0, 0.95),
+      0 0 30px rgba(0, 0, 0, 0.8),
+      0 0 20px rgba(243, 156, 18, 0.3);
   }
-  .year { display: block; font-size: .55em; margin-top: 4px; }
-  .ghost {
+  .title-sub {
     display: block;
-    width: 72px; height: auto;
-    margin: 36px auto 8px;
-    animation: float 3.2s ease-in-out infinite;
+    color: var(--moon-light);
   }
-  @keyframes float { 50% { transform: translateY(-10px); } }
-  @media (prefers-reduced-motion: reduce) { .ghost { animation: none; } }
-  .date { margin: 0; font-size: clamp(34px, 10vw, 52px); line-height: 1.2; color: var(--moon); }
-  .date small { font-size: .45em; margin-left: .2em; }
-  .time { margin: 4px 0 0; font-size: 20px; }
-  .place { margin: 12px 0 0; font-size: 17px; }
-  .place span { display: inline-block; color: var(--mute); font-size: 15px; }
+  .year {
+    display: inline-block;
+    font-size: 0.52em;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    margin-top: 6px;
+    color: var(--gold);
+    border-bottom: 1px solid var(--gold-border);
+    padding: 0 14px 2px;
+  }
 
+  /* 日時・場所 */
+  .event-meta {
+    margin: 28px auto 0;
+    padding: 18px 14px;
+    background: rgba(9, 13, 18, 0.75);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.6);
+    display: block;
+    width: 100%;
+    max-width: 380px;
+    box-sizing: border-box;
+  }
+  .date {
+    margin: 0;
+    font-size: clamp(30px, 8vw, 42px);
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: 0.05em;
+    color: var(--moon-light);
+    text-shadow: 0 0 16px rgba(243, 156, 18, 0.35);
+  }
+  .date small {
+    font-size: 0.42em;
+    font-weight: 800;
+    letter-spacing: 0.15em;
+    margin-left: 0.4em;
+    color: var(--vermilion);
+  }
+  .time {
+    margin: 6px 0 0;
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    color: var(--paper);
+  }
+  .place {
+    margin: 10px 0 0;
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--paper);
+  }
+  .place span {
+    display: inline-block;
+    color: var(--paper-mute);
+    font-size: 13px;
+    margin-top: 2px;
+  }
+
+  /* 通行手形・千社札風 バッジ */
   .badges {
-    display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;
-    margin: 28px 0 0; padding: 0; list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin: 18px 0 0;
+    padding: 0;
+    list-style: none;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .badges li:first-child {
+    grid-column: 1 / -1;
   }
   .badges li {
-    padding: 6px 16px;
-    border-radius: 999px;
-    background: var(--pumpkin);
+    padding: 7px 8px;
+    background: linear-gradient(135deg, rgba(216, 56, 43, 0.95), rgba(184, 44, 34, 0.95));
     color: #fff;
     font-weight: 700;
-    font-size: 16px;
+    font-size: 13px;
+    letter-spacing: 0.04em;
+    border-radius: 4px;
+    border: 1px solid rgba(255,255,255,0.22);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    box-sizing: border-box;
+  }
+  .badges li::before {
+    content: "◆";
+    font-size: 8px;
+    color: var(--moon-light);
+    margin-right: 5px;
+    vertical-align: 1px;
   }
 
-  section { padding: 48px 0 8px; }
+  /* --------------------------------------
+     メインコンテンツセクション
+  ----------------------------------------- */
+  main {
+    padding-bottom: 40px;
+    background: linear-gradient(180deg, var(--void) 0%, #0c1218 50%, var(--void) 100%);
+  }
+
+  section {
+    padding: 38px 0 10px;
+    border-bottom: 1px solid rgba(212, 163, 89, 0.1);
+  }
+  section:last-of-type { border-bottom: none; }
+
+  /* 見出し（和の装飾線つき） */
   h2 {
-    margin: 0 0 20px;
-    font-size: 24px;
-    line-height: 1.4;
-    color: var(--moon);
+    margin: 0 0 18px;
+    font-size: clamp(20px, 5.2vw, 24px);
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: var(--moon-light);
+    display: flex;
+    align-items: center;
+    gap: 10px;
   }
-  .cards { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); }
-  .card {
-    padding: 14px;
-    border: 1px solid var(--line);
-    border-radius: 16px;
-    background: var(--card);
-  }
-  .card h3 { margin: 0 0 4px; font-size: 17px; line-height: 1.5; white-space: nowrap; }
-  .card p { margin: 0; color: var(--mute); font-size: 15px; }
-  .guests { display: grid; gap: 10px; }
-  .guests .card { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
-  .guests h3 { margin: 0; font-size: 19px; }
-  .guests p { white-space: nowrap; }
-  .note { margin: 16px 0 0; color: var(--mute); font-size: 15px; }
-
-  .tips { margin: 0; padding: 0; list-style: none; display: grid; gap: 12px; }
-  .tips li {
-    padding: 16px;
-    border-left: 4px solid var(--pumpkin);
-    border-radius: 8px;
-    background: var(--card);
-  }
-  .tips strong { display: block; font-size: 17px; }
-
-  footer {
-    margin-top: 56px;
-    padding: 32px 0 48px;
-    border-top: 1px solid var(--line);
-    font-size: 15px;
-    color: var(--mute);
-  }
-  footer dl { margin: 0; display: grid; grid-template-columns: auto 1fr; gap: 4px 16px; }
-  footer dt { color: var(--ink); }
-  footer dd { margin: 0; }
-  .tel {
+  h2::before {
+    content: "";
     display: inline-block;
-    margin-top: 20px;
-    padding: 12px 20px;
+    width: 5px; height: 20px;
+    background: var(--vermilion);
+    border-radius: 2px;
+    box-shadow: 0 0 8px var(--vermilion-glow);
+    flex-shrink: 0;
+  }
+  h2::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, var(--gold-border) 0%, transparent 100%);
+  }
+
+  /* おたのしみカード（minmax(0,1fr)で絶対に横幅を押し広げない） */
+  .cards {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: 100%;
+  }
+  .card {
+    min-width: 0;
+    padding: 14px 12px;
+    border: 1px solid var(--card-border);
+    border-radius: 8px;
+    background: var(--card-bg);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  .card::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 2px;
+    background: linear-gradient(90deg, transparent, var(--gold-border), transparent);
+  }
+  .card:hover {
+    transform: translateY(-2px);
+    border-color: var(--gold);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6), 0 0 15px rgba(243, 156, 18, 0.15);
+  }
+  .card h3 {
+    margin: 0 0 6px;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.35;
+    letter-spacing: 0.03em;
+    color: var(--paper);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .card p {
+    margin: 0;
+    color: var(--paper-mute);
+    font-size: 12.5px;
+    line-height: 1.55;
+    word-break: break-all;
+  }
+
+  /* ゲスト一覧（歌舞伎・相撲の番付札見立て） */
+  .guests {
+    display: grid;
+    gap: 10px;
+    width: 100%;
+  }
+  .guest-fuda {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 14px;
+    border: 1px solid var(--card-border);
+    border-radius: 6px;
+    background: linear-gradient(90deg, rgba(26, 43, 56, 0.6) 0%, rgba(18, 28, 38, 0.85) 100%);
+    position: relative;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+  .guest-fuda::before {
+    content: "";
+    position: absolute;
+    left: 6px; top: 50%;
+    transform: translateY(-50%);
+    width: 3px; height: 60%;
+    background: var(--vermilion);
+    border-radius: 1px;
+  }
+  .guest-fuda:hover {
+    border-color: var(--gold);
+    transform: translateX(4px);
+  }
+  .guest-fuda h3 {
+    margin: 0;
+    font-size: 15.5px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    color: var(--paper);
+    padding-left: 8px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .guest-fuda .origin {
+    margin: 0;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    color: var(--gold);
+    padding: 2px 8px;
+    background: rgba(8, 11, 15, 0.7);
+    border: 1px solid var(--gold-border);
+    border-radius: 4px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .note {
+    margin: 16px 0 0;
+    color: var(--paper-mute);
+    font-size: 13px;
+    letter-spacing: 0.05em;
+  }
+
+  /* 来る前に（心得の短冊） */
+  .tips {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: 10px;
+    width: 100%;
+  }
+  .tips li {
+    padding: 16px 18px;
+    border-left: 4px solid var(--vermilion);
+    border-radius: 0 8px 8px 0;
+    background: var(--card-bg);
+    border-top: 1px solid var(--card-border);
+    border-right: 1px solid var(--card-border);
+    border-bottom: 1px solid var(--card-border);
+    font-size: 14px;
+    line-height: 1.7;
+  }
+  .tips strong {
+    display: block;
+    font-size: 15px;
+    letter-spacing: 0.06em;
+    color: var(--moon-light);
+    margin-bottom: 3px;
+  }
+
+  /* --------------------------------------
+     フッター（提灯・問い合わせ）
+  ----------------------------------------- */
+  footer {
+    margin-top: 40px;
+    padding: 36px 0 54px;
+    border-top: 1px solid var(--gold-border);
+    font-size: 14px;
+    color: var(--paper-mute);
+    background: rgba(8, 11, 15, 0.85);
+  }
+  footer dl {
+    margin: 0;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 6px 16px;
+    align-items: baseline;
+  }
+  footer dt {
+    color: var(--gold);
+    font-weight: 700;
+    letter-spacing: 0.08em;
+  }
+  footer dd {
+    margin: 0;
+    color: var(--paper);
+  }
+
+  /* 提灯風の問い合わせボタン */
+  .tel-wrap {
+    margin-top: 24px;
+    text-align: center;
+  }
+  .tel {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    max-width: 320px;
+    padding: 13px 20px;
     border-radius: 999px;
-    border: 2px solid var(--moon);
-    color: var(--moon);
+    border: 1px solid var(--gold);
+    background: linear-gradient(135deg, rgba(26, 43, 56, 0.95) 0%, rgba(18, 28, 38, 0.95) 100%);
+    color: var(--moon-light);
     font-weight: 700;
     text-decoration: none;
-    font-size: 17px;
+    font-size: 18px;
+    letter-spacing: 0.08em;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.6), 0 0 15px rgba(243, 156, 18, 0.2);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
   }
-  .coming { margin: 24px 0 0; font-size: 15px; }
-  .nb { display: inline-block; }
+  .tel:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 22px rgba(0,0,0,0.8), 0 0 25px rgba(243, 156, 18, 0.4);
+    color: #fff;
+  }
+  .tel-icon {
+    font-size: 15px;
+    color: var(--vermilion);
+  }
+
+  .coming {
+    margin: 24px 0 0;
+    font-size: 13px;
+    letter-spacing: 0.05em;
+    text-align: center;
+    color: var(--paper-mute);
+  }
+
+  /* --------------------------------------
+     極小画面（320px〜360px）対応
+  ----------------------------------------- */
+  @media (max-width: 360px) {
+    .wrap { padding: 0 12px; }
+    .hero { padding: 42px 0 50px; }
+    .event-meta { padding: 14px 10px; }
+    .badges li { font-size: 12px; padding: 5px 6px; }
+    .card { padding: 12px 8px; }
+    .card h3 { font-size: 13.5px; }
+    .card p { font-size: 11.5px; }
+    .guest-fuda { padding: 12px 10px; }
+    .guest-fuda h3 { font-size: 14.5px; padding-left: 6px; }
+    .guest-fuda .origin { font-size: 11px; padding: 2px 6px; }
+  }
 </style>
 </head>
 <body>
 
 <header class="hero">
+  <!-- 柿色の満月 -->
   <div class="moon" aria-hidden="true"></div>
+
+  <!-- 浮世絵風 瑞雲（左） -->
+  <svg class="cloud cloud-left" viewBox="0 0 200 80" aria-hidden="true">
+    <path d="M10 50 Q 30 20, 70 30 T 130 25 Q 160 10, 185 35 T 195 60 A 20 20 0 0 1 175 75 H 30 A 25 25 0 0 1 10 50 Z" />
+    <path d="M40 50 Q 55 35, 80 40 T 125 38 Q 145 28, 160 45" />
+    <path d="M70 52 A 12 12 0 1 1 82 40" />
+    <path d="M130 50 A 10 10 0 1 1 140 40" />
+  </svg>
+
+  <!-- 浮世絵風 瑞雲（右） -->
+  <svg class="cloud cloud-right" viewBox="0 0 200 80" aria-hidden="true">
+    <path d="M190 50 Q 170 20, 130 30 T 70 25 Q 40 10, 15 35 T 5 60 A 20 20 0 0 0 25 75 H 170 A 25 25 0 0 0 190 50 Z" />
+    <path d="M160 50 Q 145 35, 120 40 T 75 38 Q 55 28, 40 45" />
+    <path d="M130 52 A 12 12 0 1 0 118 40" />
+    <path d="M70 50 A 10 10 0 1 0 60 40" />
+  </svg>
+
   <div class="wrap hero-inner">
-    <p class="kicker">十和のハロウィン</p>
-    <h1 class="pop">ハロウィン<br>村バル<span class="year">2026</span></h1>
+    <div class="kicker-wrap">
+      <span class="rakkan mincho">土佐</span>
+      <p class="kicker mincho">十和のハロウィン</p>
+    </div>
 
-    <svg class="ghost" viewBox="0 0 80 96" aria-hidden="true">
-      <path d="M40 4C20 4 8 20 8 40v48l10-8 11 8 11-8 11 8 11-8 10 8V40C72 20 60 4 40 4z" fill="#fff"/>
-      <circle cx="30" cy="40" r="5" fill="#1c1233"/>
-      <circle cx="50" cy="40" r="5" fill="#1c1233"/>
-      <ellipse cx="40" cy="56" rx="6" ry="4" fill="#1c1233"/>
-    </svg>
+    <h1 class="mincho">
+      ハロウィン<br>
+      <span class="title-sub">村バル</span>
+      <span class="year">2026</span>
+    </h1>
 
-    <p class="date pop">10.31<small>SAT</small></p>
-    <p class="time">11:00 スタート</p>
-    <p class="place">十和地域振興局 駐車場<br><span>雨の日は役場ホール</span></p>
+    <div class="event-meta">
+      <p class="date mincho">10.31<small>SAT</small></p>
+      <p class="time mincho">11:00 スタート</p>
+      <p class="place">十和地域振興局 駐車場<br><span>雨の日は役場ホール</span></p>
 
-    <ul class="badges">
-      <li>どなたでも参加OK</li>
-      <li>参加無料</li>
-      <li>申込不要</li>
-    </ul>
+      <ul class="badges">
+        <li>どなたでも参加OK</li>
+        <li>参加無料</li>
+        <li>申込不要</li>
+      </ul>
+    </div>
   </div>
 </header>
 
-<main class="wrap">
-  <section>
-    <h2 class="pop">当日のおたのしみ</h2>
-    <div class="cards">
-      <div class="card"><h3>仮装パレード</h3><p>仮装して十川商店筋を練り歩こう</p></div>
-      <div class="card"><h3>バル</h3><p>おいしい出店でごはん</p></div>
-      <div class="card"><h3>キャラステージ</h3><p>ゲストのキャラクターたちと遊ぼう</p></div>
-      <div class="card"><h3>仮装グランプリ</h3><p>いちばんの仮装はだれ？</p></div>
-    </div>
-    <p class="note">くわしい時間割は準備中です。</p>
-  </section>
+<main>
+  <div class="wrap">
+    <section>
+      <h2 class="mincho">当日のおたのしみ</h2>
+      <div class="cards">
+        <div class="card">
+          <h3 class="mincho">仮装パレード</h3>
+          <p>仮装して十川商店筋を練り歩こう</p>
+        </div>
+        <div class="card">
+          <h3 class="mincho">バル</h3>
+          <p>おいしい出店でごはん</p>
+        </div>
+        <div class="card">
+          <h3 class="mincho">キャラステージ</h3>
+          <p>ゲストのキャラクターたちと遊ぼう</p>
+        </div>
+        <div class="card">
+          <h3 class="mincho">仮装グランプリ</h3>
+          <p>いちばんの仮装はだれ？</p>
+        </div>
+      </div>
+      <p class="note">くわしい時間割は準備中です。</p>
+    </section>
 
-  <section>
-    <h2 class="pop">ゲストがやってくる！</h2>
-    <div class="guests">
-      <div class="card"><h3>のぼりんとたけぽん</h3><p>十和</p></div>
-      <div class="card"><h3>はりまとやばし</h3><p>高知市</p></div>
-      <div class="card"><h3>うまのすけっぴ</h3><p>海洋堂</p></div>
-      <div class="card"><h3>ししとう家族</h3><p>三原村</p></div>
-    </div>
-    <p class="note">ゲストの紹介は、このページで近日公開します。</p>
-  </section>
+    <section>
+      <h2 class="mincho">ゲストがやってくる！</h2>
+      <div class="guests">
+        <div class="guest-fuda">
+          <h3 class="mincho">のぼりんとたけぽん</h3>
+          <p class="origin mincho">十和</p>
+        </div>
+        <div class="guest-fuda">
+          <h3 class="mincho">はりまとやばし</h3>
+          <p class="origin mincho">高知市</p>
+        </div>
+        <div class="guest-fuda">
+          <h3 class="mincho">うまのすけっぴ</h3>
+          <p class="origin mincho">海洋堂</p>
+        </div>
+        <div class="guest-fuda">
+          <h3 class="mincho">ししとう家族</h3>
+          <p class="origin mincho">三原村</p>
+        </div>
+      </div>
+      <p class="note">ゲストの紹介は、このページで近日公開します。</p>
+    </section>
 
-  <section>
-    <h2 class="pop">来る前に</h2>
-    <ul class="tips">
-      <li><strong>仮装して来てね！</strong>役場2Fで着替えられます（10:30〜）</li>
-      <li><strong>お菓子はなくなり次第終了です</strong><span class="nb">お早めにどうぞ。</span></li>
-    </ul>
-  </section>
+    <section>
+      <h2 class="mincho">来る前に</h2>
+      <ul class="tips">
+        <li>
+          <strong class="mincho">仮装して来てね！</strong>
+          役場2Fで着替えられます（10:30〜）
+        </li>
+        <li>
+          <strong class="mincho">お菓子はなくなり次第終了です</strong>
+          <span class="nb">お早めにどうぞ。</span>
+        </li>
+      </ul>
+    </section>
 
-  <footer>
-    <dl>
-      <dt>主催</dt><dd>地域おこし協力隊 大野・国沢</dd>
-      <dt>協力</dt><dd>十川商店筋、育つ会とおわ</dd>
-      <dt>問い合わせ</dt><dd>十和地域振興局</dd>
-    </dl>
-    <a class="tel" href="tel:0880285111">0880-28-5111</a>
-    <p class="coming">くわしい情報は、準備ができしだい<span class="nb">このページでお知らせします。</span></p>
-  </footer>
+    <footer>
+      <dl>
+        <dt>主催</dt>
+        <dd>地域おこし協力隊 大野・国沢</dd>
+        <dt>協力</dt>
+        <dd>十川商店筋、育つ会とおわ</dd>
+        <dt>問い合わせ</dt>
+        <dd>十和地域振興局</dd>
+      </dl>
+
+      <div class="tel-wrap">
+        <a class="tel mincho" href="tel:0880285111">
+          <span class="tel-icon">☎</span> 0880-28-5111
+        </a>
+      </div>
+
+      <p class="coming">
+        くわしい情報は、準備ができしだい<span class="nb">このページでお知らせします。</span>
+      </p>
+    </footer>
+  </div>
 </main>
 
 </body>
