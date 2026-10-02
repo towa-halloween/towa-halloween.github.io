@@ -4,16 +4,16 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>第2回 とおわハロウィンパーティー 2026｜10月31日（土）十和</title>
-<meta name="description" content="2026年10月31日（土）10:00〜16:00、十和地域振興局 駐車場（雨天時は役場ホール）。どなたでも参加OK・参加無料・申込不要。豪華ゲスト！あのキャラがやってくる♪">
+<meta name="description" content="2026年10月31日（土）10:00〜16:00、十和地域振興局 駐車場（雨天時は役場ホール）。どなたでも参加OK・参加無料・事前申込不要。豪華ゲスト！あのキャラがやってくる♪">
 <meta property="og:title" content="第2回 とおわハロウィンパーティー 2026">
-<meta property="og:description" content="10月31日（土）10:00〜16:00 十和地域振興局 駐車場。どなたでも参加OK・参加無料・申込不要。">
+<meta property="og:description" content="10月31日（土）10:00〜16:00 十和地域振興局 駐車場。どなたでも参加OK・参加無料・事前申込不要。">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://towa-halloween.github.io/">
 <meta name="theme-color" content="#3a1670">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500;700;800;900&family=Mochiy+Pop+One&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500;700;800;900&family=Aoboshi+One&family=Noto+Sans+JP:wght@700;900&display=swap" rel="stylesheet">
 
 <style>
   :root {
@@ -31,7 +31,7 @@
     --blue: #1a7fd4;
     --purple: #8a3fd0;
     --radius: 22px;
-    --font-head: "Mochiy Pop One", "M PLUS Rounded 1c", "Hiragino Maru Gothic ProN", "Yu Gothic", sans-serif;
+    --font-head: "Aoboshi One", "M PLUS Rounded 1c", "Hiragino Maru Gothic ProN", "Yu Gothic", sans-serif;
     --font-body: "M PLUS Rounded 1c", "Hiragino Maru Gothic ProN", "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
   }
   *, *::before, *::after { box-sizing: border-box; }
@@ -81,15 +81,17 @@
   .banner {
     display: inline-block; max-width: 100%;
     font-family: var(--font-head); font-size: clamp(15px, 4.7vw, 32px); line-height: 1.35;
-    color: var(--ink);
-    background: linear-gradient(180deg, #fff2a6, #ffd23a);
-    border: 4px solid var(--orange);
-    border-radius: 16px; padding: 8px 16px 9px;
+    color: #fff;
+    background: linear-gradient(180deg, #ffb340, #ff8a14);
+    border: 4px solid #fff;
+    border-radius: 16px; padding: 8px 18px 10px;
+    -webkit-text-stroke: .2em #7a2a00; paint-order: stroke fill;
+    text-shadow: 0 .07em 0 #7a2a00;
     box-shadow: 0 4px 0 rgba(42,16,85,.55), 0 8px 18px rgba(0,0,0,.3);
     text-wrap: balance;
   }
-  .banner .r { color: #e8372a; }
-  .banner .p { color: #e0267f; }
+  .banner .r { color: #ffe84a; }
+  .banner .p { color: #ffe84a; }
   .collage { position: relative; margin: 18px auto 6px; max-width: 720px; display: grid; grid-template-columns: repeat(6, 1fr); gap: 4px 6px; align-items: end; }
   .collage img {
     width: 100%;
@@ -135,6 +137,7 @@
     display: inline-block; font-family: var(--font-head); font-weight: 400; font-size: 17px; line-height: 1;
     color: #fff; padding: 8px 18px 8px; border-radius: 999px; margin: -34px 0 10px; border: 3px solid #fff;
     box-shadow: 0 3px 0 rgba(42,16,85,.4);
+    -webkit-text-stroke: .18em rgba(42,16,85,.8); paint-order: stroke fill;
   }
   .tag.o { background: var(--orange); } .tag.pu { background: var(--night-3); } .tag.g { background: var(--green); }
   .date-big { font-size: 20px; line-height: 1.3; }
@@ -160,8 +163,9 @@
   .ribbon h2 {
     display: inline-block; max-width: 100%;
     font-family: var(--font-head); font-weight: 400; font-size: clamp(20px, 6vw, 32px); line-height: 1.35;
-    color: var(--ink); background: linear-gradient(180deg, #fff2a6, #ffd23a);
-    border: 4px solid var(--orange); border-radius: 16px; padding: 7px 20px 8px;
+    color: #fff; background: linear-gradient(180deg, #ffb340, #ff8a14);
+    border: 4px solid #fff; border-radius: 16px; padding: 7px 22px 9px;
+    -webkit-text-stroke: .2em #7a2a00; paint-order: stroke fill; text-shadow: 0 .07em 0 #7a2a00;
     box-shadow: 0 4px 0 rgba(42,16,85,.55);
   }
   .lead { text-align: center; font-size: 17px; margin: -6px auto 22px; max-width: 34em; }
@@ -196,8 +200,9 @@
   .time {
     flex: 0 0 92px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;
     color: #fff; font-family: var(--font-head); font-size: 24px; line-height: 1.1; padding: 10px 4px;
+    -webkit-text-stroke: .16em rgba(42,16,85,.85); paint-order: stroke fill;
   }
-  .time small { font-family: var(--font-body); font-weight: 800; font-size: 13px; margin-top: 3px; }
+  .time small { -webkit-text-stroke: 0; font-family: var(--font-body); font-weight: 800; font-size: 13px; margin-top: 3px; }
   .t0 { background: #7a62c9; } .t1 { background: var(--pink); } .t2 { background: var(--orange-d); } .t3 { background: var(--green); }
   .t4 { background: var(--blue); } .t5 { background: var(--purple); } .t6 { background: #d6267f; } .t7 { background: #0f8fc4; }
   .what { padding: 12px 14px 13px; flex: 1; min-width: 0; }
@@ -280,6 +285,282 @@
     .pk { width: 90px; } .pk.r { width: 76px; }
     .skyline { height: 90px; }
   }
+
+  /* ================= チラシ風 仕上げ ================= */
+  .hero { padding-top: 26px; background:
+      radial-gradient(ellipse 70% 55% at 50% 0%, rgba(255,214,80,.55) 0%, rgba(255,214,80,0) 70%),
+      radial-gradient(ellipse 80% 60% at 20% 90%, rgba(180,90,255,.45), transparent 70%),
+      radial-gradient(ellipse 80% 60% at 85% 70%, rgba(120,60,220,.5), transparent 70%); }
+  .moon { top: -60px; width: min(86vw, 640px); }
+  .tree { position: absolute; bottom: 40px; height: min(52vw, 420px); width: auto; fill: #1c0840; z-index: 1; opacity: .95; }
+  .tree.tl { left: -2%; } .tree.tr { right: -2%; transform: scaleX(-1); }
+  .ghost { position: absolute; z-index: 3; width: 64px; height: auto; filter: drop-shadow(0 4px 6px rgba(0,0,0,.35)); }
+  .ghost.g1 { right: 5%; bottom: 30%; width: clamp(48px, 7vw, 100px); transform: rotate(8deg); }
+  .star { position: absolute; z-index: 1; color: #ffd23a; font-size: 22px; line-height: 1; text-shadow: 0 0 8px rgba(255,210,58,.9); animation: tw 2.8s ease-in-out infinite; }
+  .star.s1 { left: 9%; top: 26%; } .star.s2 { left: 24%; top: 12%; font-size: 14px; animation-delay: -.7s; }
+  .star.s3 { right: 22%; top: 16%; font-size: 16px; animation-delay: -1.4s; } .star.s4 { right: 8%; top: 30%; animation-delay: -2s; }
+  .star.s5 { left: 4%; top: 52%; font-size: 14px; animation-delay: -1s; }
+  @keyframes tw { 0%,100% { opacity: 1; transform: scale(1) rotate(0); } 50% { opacity: .55; transform: scale(.8) rotate(15deg); } }
+  .skyline { height: clamp(60px, 10vw, 130px); fill: #1c0840; margin-top: -1px; }
+
+  /* リボンの帯（両端が燕尾） */
+  .banner-wrap { display: inline-block; max-width: 100%; filter: drop-shadow(0 5px 0 rgba(42,16,85,.6)) drop-shadow(0 10px 14px rgba(0,0,0,.35)); }
+  .banner {
+    border: 0; border-radius: 0; padding: 12px clamp(26px, 6vw, 52px) 14px; position: relative;
+    clip-path: polygon(0 0, 100% 0, calc(100% - 20px) 50%, 100% 100%, 0 100%, 20px 50%);
+    background: linear-gradient(180deg, #ffe066 0%, #ffb02e 55%, #ff8a14 100%);
+    box-shadow: none; -webkit-text-stroke: 0;
+    font-size: clamp(16px, 4.9vw, 40px);
+    color: #fff;
+    text-shadow: -.06em -.06em 0 #7a2a00, .06em -.06em 0 #7a2a00, -.06em .06em 0 #7a2a00, .06em .06em 0 #7a2a00, 0 .1em 0 #7a2a00;
+  }
+  .banner .r, .banner .p { color: #ff3b2f; text-shadow: -.06em -.06em 0 #fff, .06em -.06em 0 #fff, -.06em .06em 0 #fff, .06em .06em 0 #fff, 0 .1em 0 #7a2a00; }
+
+  /* ゲストをぐっと大きく */
+  .collage { margin-top: 10px; margin-bottom: -14px; }
+  .pk { filter: drop-shadow(0 0 14px rgba(255,150,30,.9)) drop-shadow(0 4px 4px rgba(0,0,0,.35)); }
+
+  /* タイトル：白ぶち→こい紫ぶち→金のグラデ */
+  .title { position: relative; z-index: 4; margin-top: 4px; }
+  .title .big {
+    position: relative; display: inline-block; -webkit-text-stroke: .36em #fff; paint-order: stroke fill; color: #fff;
+    text-shadow: none; letter-spacing: .02em; line-height: 1.12;
+    filter: drop-shadow(0 .07em 0 rgba(0,0,0,.45)) drop-shadow(0 .14em .12em rgba(0,0,0,.35));
+  }
+  .title .big::before, .title .big::after { content: attr(data-t); position: absolute; left: 0; top: 0; white-space: nowrap; }
+  .title .big::before { -webkit-text-stroke: .2em #3a1060; color: #3a1060; }
+  .title .big::after { -webkit-text-stroke: 0; color: transparent; background: linear-gradient(180deg, #fff59a 0%, #ffd23a 38%, #ff9a1a 100%); -webkit-background-clip: text; background-clip: text; }
+  .title .big.yr::after { background: none; color: #fff; }
+  .title .big.yr::before { -webkit-text-stroke: .24em #3a1060; }
+  .title .kai { background: radial-gradient(circle at 40% 30%, #ffe066, #ffb02e); color: #3a1060; border: 4px solid #fff; box-shadow: 0 4px 0 #3a1060, 0 0 0 7px #3a1060; }
+
+  /* 日時・場所・ひとこと：チラシの大きなパネル */
+  .info { margin-top: 36px; gap: 22px; background: linear-gradient(180deg, #fff8e6, #ffeec2); border: 4px solid #fff; border-radius: 28px; padding: 30px 14px 16px; box-shadow: 0 8px 0 rgba(42,16,85,.55), 0 0 0 4px rgba(255,170,40,.8); position: relative; }
+  .info .card { background: transparent; border: 0; box-shadow: none; padding: 8px 8px 8px; }
+  .tag { font-size: 18px; padding: 9px 22px 9px; margin: -46px 0 8px; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 4px 0 rgba(42,16,85,.45); -webkit-text-stroke: 0; text-shadow: 0 2px 0 rgba(42,16,85,.6); }
+  .tag::before { font-size: 1.15em; text-shadow: none; }
+  .tag.o::before { content: "🎃"; } .tag.pu::before { content: "📍"; } .tag.g::before { content: "🎉"; }
+  .date-big { font-size: 22px; } .date-big b { font-size: clamp(40px, 5vw, 56px); } .time-big { font-size: clamp(34px, 4.2vw, 48px); color: var(--ink); }
+  .place-big { font-size: clamp(24px, 2.6vw, 32px); font-family: var(--font-head); font-weight: 400; }
+  .hitokoto { font-size: clamp(22px, 2.3vw, 28px); }
+  @media (min-width: 900px) {
+    .info { padding: 34px 28px 20px; gap: 0; }
+    .info .card + .card { border-left: 3px dotted rgba(138,63,208,.4); padding-left: 26px; }
+  }
+
+  /* 見出しのリボンも燕尾に */
+  .ribbon { filter: drop-shadow(0 4px 0 rgba(42,16,85,.6)); }
+  .ribbon h2 {
+    border: 0; border-radius: 0; padding: 10px 44px 12px; box-shadow: none;
+    clip-path: polygon(0 0, 100% 0, calc(100% - 16px) 50%, 100% 100%, 0 100%, 16px 50%);
+    background: linear-gradient(180deg, #ffe066 0%, #ffb02e 55%, #ff8a14 100%);
+    -webkit-text-stroke: 0; color: #fff;
+    text-shadow: -.06em -.06em 0 #7a2a00, .06em -.06em 0 #7a2a00, -.06em .06em 0 #7a2a00, .06em .06em 0 #7a2a00, 0 .1em 0 #7a2a00;
+  }
+
+  /* 時間割：色つきの札＋アイコン */
+  .time { -webkit-text-stroke: 0; text-shadow: -.05em -.05em 0 rgba(42,16,85,.7), .05em -.05em 0 rgba(42,16,85,.7), -.05em .05em 0 rgba(42,16,85,.7), .05em .05em 0 rgba(42,16,85,.7), 0 .08em 0 rgba(42,16,85,.7); }
+  .time small { text-shadow: none; }
+  .time::before { font-size: 24px; line-height: 1; margin-bottom: 4px; text-shadow: none; }
+  .t0::before { content: "👗"; } .t1::before { content: "🎃"; } .t2::before { content: "🎵"; } .t3::before { content: "🚶"; }
+  .t4::before { content: "🍴"; } .t5::before { content: "⭐"; } .t6::before { content: "🏆"; } .t7::before { content: "🎤"; }
+  .what h3 { font-size: 22px; }
+  section { padding-top: 56px; }
+  @media (min-width: 640px) { .what h3 { font-size: 26px; } }
+  .title { display: flex; flex-direction: column; align-items: center; }
+  .title .row1 { display: flex; }
+  .hero .wrap { max-width: 1100px; }
+  .date-big { white-space: nowrap; } .time-big { white-space: nowrap; font-size: clamp(30px, 3.3vw, 44px); }
+  .date-big .dow { margin-left: 6px; }
+  .place-big { white-space: nowrap; font-size: clamp(22px, 2.3vw, 30px); }
+  .hitokoto { font-size: clamp(20px, 2vw, 26px); }
+  @media (min-width: 900px) { .info { grid-template-columns: 1.15fr 1fr 1.3fr; } }
+
+  /* ================= 新レイアウト（手書きラフ＋参考サイトの横スクロール） ================= */
+  .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  .hero { padding-top: 0; }
+  .marq { overflow: hidden; }
+  .marq-track { display: flex; width: max-content; animation: marq-x 200s linear infinite; will-change: transform; }
+  .marq-set { display: flex; flex: none; align-items: stretch; }
+  @keyframes marq-x { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+  /* 上：写真の下の縁は「円の下半分」。タイトルはその縁に沿う */
+  .kv { position: relative; width: 100%; aspect-ratio: 1600 / 760; }
+  .kv-photo { position: absolute; left: 0; top: 0; width: 100%; height: 92.1%; clip-path: url(#kvclip); background: #1c0840; }
+  .kv-photo .marq-set { align-items: flex-start; }
+  .kv-photo .marq-set img { height: 100%; width: auto; max-width: none; flex: none; display: block; }
+  .kv-photo .marq-track { height: 100%; }
+  .kids-track { animation: none; }
+
+  .title { position: absolute; inset: 0; margin: 0; z-index: 4; pointer-events: none; }
+  .ttl { display: block; width: 100%; height: 100%; overflow: visible; filter: drop-shadow(0 5px 0 rgba(0,0,0,.4)) drop-shadow(0 10px 8px rgba(0,0,0,.3)); }
+  .ttl text { font-family: var(--font-head); font-size: 82px; letter-spacing: .02em; stroke-linejoin: round; paint-order: stroke fill; }
+  .ttl .t1 { fill: #fff; stroke: #fff; stroke-width: 40px; }
+  .ttl .t2 { fill: #3a1060; stroke: #3a1060; stroke-width: 22px; }
+  .ttl .t3 { fill: url(#gold); stroke: none; }
+  .ttl .t3 .yr { fill: #fff; }
+  .ttl .kc1 { fill: #3a1060; stroke: #fff; stroke-width: 6px; } .ttl .kc2 { fill: #ffc21a; transform: scale(.86); }
+  .ttl .kt { font-size: 46px; fill: #3a1060; stroke: none; paint-order: normal; letter-spacing: 0; }
+
+  .info { margin-top: -40px; }
+
+  /* 下：枠は大きく。となり同士は細い線でつなぐ */
+  .gd-band { position: relative; margin-top: 0; clip-path: url(#gdclip); }
+  .gd-band .pn-photo { padding-top: clamp(70px, 8vw, 120px); }
+  .gd-band .pn-body { padding-bottom: clamp(80px, 9vw, 130px); }
+  /* いまは背景をべったり暗い紫に（装飾はあとで） */
+  body { background: #2d0f5e; }
+  .hero { background: none; }
+  .hero .bat { display: none; }
+  .gd-track { animation-duration: 260s; }
+  .pn { flex: none; width: clamp(300px, 33vw, 480px); background: var(--cream); color: var(--ink); display: flex; flex-direction: column; border-left: 3px solid rgba(255,255,255,.9); }
+  .pn-photo { background: radial-gradient(circle at 50% 38%, #fff 0%, #ffe9a6 60%, #ffcf6b 100%); display: flex; align-items: flex-end; justify-content: center; gap: 12px; padding: 22px 14px 10px; min-height: clamp(260px, 30vw, 400px); }
+  .pn-photo img { max-height: clamp(230px, 26vw, 360px); width: auto; max-width: 100%; filter: drop-shadow(0 6px 6px rgba(80,30,0,.3)); }
+  .pn-photo.two img { max-width: 52%; }
+  .pn-photo .frame { flex: 0 0 38%; align-self: center; aspect-ratio: 3/4; display: flex; align-items: center; justify-content: center; text-align: center; border-radius: 18px; font-size: 15px; line-height: 1.4; color: #7a5a00; padding: 6px; }
+  .pn-body { padding: 16px 18px 22px; flex: 1; }
+  @media (prefers-reduced-motion: reduce) { .marq-track { animation: none; } }
+
+  /* ---- 日時・場所・ひとこと：背景なし（紫にそのまま） ---- */
+  .info { background: none; border: 0; box-shadow: none; border-radius: 0; color: #fff; }
+  .info .card, .info .card p { color: #fff; }
+  .info .date-big b { color: var(--yellow); }
+  .info .time-big, .info .place-big { color: #fff; }
+  .info .hitokoto em { color: #ffd23a; }
+  .info .rain { color: #e6d8ff; }
+  @media (min-width: 900px) { .info .card + .card { border-left-color: rgba(255,255,255,.35); } }
+
+  /* ---- キャラの枠：説明は一旦なし。白い線もなし。キャラを枠いっぱいに ---- */
+  .gd-band { background: linear-gradient(180deg, #fff3c4 0%, #ffe08a 55%, #ffc65a 100%); }
+  .gd-band .pn { background: none; border-left: 0; width: clamp(380px, 40vw, 600px); height: clamp(480px, 54vw, 780px); }
+  .gd-band .pn-photo { background: none; min-height: 0; height: 100%; padding: 13% 10px 13%; align-items: flex-end; }
+  .gd-band .pn-photo img { height: 100%; max-height: none; width: auto; max-width: 100%; object-fit: contain; object-position: bottom; }
+  .gd-band .pn-photo.two img { max-width: 58%; }
+  .gd-band .pn-photo.two .frame { flex: 0 0 34%; }
+  .gd-band .pn-body { display: none; }
+
+  /* ---- 日時・場所・ひとこと：白い文字だけ（枠・丸なし） ---- */
+  .info2 { text-align: left; container-type: inline-size; margin-top: -20px; padding: 0 clamp(8px, 2vw, 24px) 0; color: #fff; font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif; }
+  .info2 p { margin: 0; }
+  .info2 .d-big .gp { margin-left: .3em; } .info2 .d-big .tm { font-size: clamp(20px, 3.4cqw, 36px); font-weight: 700; letter-spacing: .04em; margin-left: 1em; white-space: nowrap; }
+  .info2 .d-big .yr { font-size: .5em; } .info2 .d-big .u { font-size: .62em; }
+  .info2 .d-big { font-weight: 900; font-size: 6.9cqw; line-height: 1.15; letter-spacing: -.01em; white-space: nowrap; }
+  .info2 .d-sub { font-weight: 700; font-size: clamp(20px, 3.4cqw, 36px); line-height: 1.7; letter-spacing: .04em; margin-top: .3em; }
+  .info2 .rain2 { margin-left: 1em; font-size: .72em; white-space: nowrap; }
+  @media (max-width: 600px) { .info2 .d-sub { font-size: 18px; } .info2 .rain2 { display: block; margin-left: 0; } }
+
+  /* ---- キャラの枠：顔のアップ。枠からはみ出した分は切れる ---- */
+  .gd-band .pn { width: clamp(380px, 42vw, 640px); height: clamp(480px, 54vw, 780px); border: 0; }
+  .gd-band .pn-photo { position: relative; display: block; padding: 0; height: 100%; overflow: hidden; }
+  .gd-band .pn-photo img { position: absolute; left: var(--fx, 50%); top: var(--fy, 40%); height: calc(var(--h, 1.3) * 100%); width: auto; max-width: none; max-height: none; transform: translate(calc(var(--cx, 50%) * -1), calc(var(--cy, 15%) * -1)); filter: none; }
+  .gd-band .pn-photo.tk { display: flex; align-items: center; justify-content: center; }
+  .gd-band .pn-photo.nt .frame { position: absolute; right: 7%; top: 50%; transform: translateY(-50%); width: 30%; aspect-ratio: 3/4; flex: none; }
+
+  /* ---- 飾り（梟さんが用意した素材）。仮の配置：文字の右側と、帯の上にならべる ---- */
+  .hero > .wrap { position: relative; z-index: 5; }
+  .gd-wrap { position: relative; margin-top: 42px; }
+  .gd-wrap .gd-band { margin-top: 0; }
+  .decor { position: absolute; left: 0; right: 0; bottom: calc(100% - 2px); height: 0; pointer-events: none; z-index: 2; }
+  .decor .dc { position: absolute; height: auto; max-width: none; }
+  .decor .sky { left: 0; width: 100%; bottom: 0; opacity: .4; z-index: 0; }
+  .decor .castle { right: 0; bottom: 0; width: 8%; z-index: 1; }
+  .decor .cat { left: 1.5%; bottom: 0; width: 6%; z-index: 2; }
+  .decor .g-bow { left: 64%; bottom: 0; width: 5%; z-index: 2; }
+  .decor .p-stack { left: 69%; bottom: 0; width: 5.5%; z-index: 2; }
+  .decor .p1 { left: 74.5%; bottom: 0; width: 8%; z-index: 3; }
+  .decor .g-hat { left: 83%; bottom: 0; width: 5.5%; z-index: 2; }
+  .decor .p-hat { left: 89%; bottom: 0; width: 6.5%; z-index: 3; }
+  .decor .c1 { display: none; }
+  .decor .bat { z-index: 2; }
+  .decor .bat.a { right: 30%; bottom: 200px; width: 6%; }
+  .decor .bat.b { right: 21%; bottom: 150px; width: 4%; }
+  .decor .bat.c { left: 56%; bottom: 215px; width: 4.5%; transform: scaleX(-1); }
+  .decor .web { right: 0; bottom: 195px; width: 9%; z-index: 1; opacity: .8; }
+  .decor .spider { right: 8%; bottom: 200px; width: 1.7%; z-index: 1; }
+  @media (max-width: 700px) { .decor { display: none; } }
+  /* 「佐藤」の表札の上に乗せる飾り（写真が止まっている前提の仮の位置） */
+  .kv-badge { position: absolute; left: 50%; top: 12.5%; width: 15%; height: auto; transform: translate(-50%, -50%) rotate(-4deg); z-index: 3; filter: drop-shadow(0 6px 8px rgba(0,0,0,.35)); }
+
+  /* ---- 日時（左）と場所（右）を、真ん中の縦線で分ける ---- */
+  .info2 { display: grid; grid-template-columns: 1fr 1fr; column-gap: 0; align-items: start; }
+  .info2 .i-left { padding-right: 2.2cqw; }
+  .info2 .i-right { border-left: 3px solid rgba(255,255,255,.7); padding: .4em 0 .4em 2.6cqw; align-self: stretch; display: flex; flex-direction: column; justify-content: center; }
+  .info2 .i-right .d-sub:first-child { margin-top: 0; font-size: clamp(22px, 3.9cqw, 42px); }
+  .info2 .rain2 { margin-left: 0; display: block; font-size: clamp(15px, 2.2cqw, 24px); white-space: normal; }
+  .info2 .i-one { grid-column: 1 / -1; margin-top: .9em; }
+  .info2 .d-big { font-size: 6.2cqw; }
+  .info2 .d-big .gp { margin-left: .3em; }
+  .info2 .i-left .d-sub { margin-top: .1em; }
+  @media (max-width: 600px) { .info2 { grid-template-columns: 1fr; } .info2 .i-right { border-left: 0; padding-left: 0; } }
+  /* ハロウィンの飾りは、左の写真の左上へ */
+  .kv-badge { left: 11%; top: 17%; width: 14%; transform: translate(-50%, -50%) rotate(-6deg); }
+
+  /* ---- ラフ画どおり：左＝日時、縦線、右＝場所・雨天・ひとこと（縦に並べる） ---- */
+  .info2 .i-right { justify-content: flex-start; padding: .2em 0 .2em 2.6cqw; }
+  .info2 .i-right .d-sub { margin-top: .15em; line-height: 1.5; }
+  .info2 .i-right .place { font-size: clamp(22px, 3.9cqw, 42px); }
+  .info2 .i-right .hit { font-size: clamp(20px, 3.1cqw, 34px); }
+  .info2 .i-right .rain2 { margin-bottom: .5em; }
+  /* ハロウィンの飾りは、左下（波の下の左側） */
+  .kv-badge { left: 11%; top: 79%; width: 14%; transform: translate(-50%, -50%) rotate(-5deg); }
+
+  /* ---- 日時の下に場所、右は「ひとこと」だけ ---- */
+  .info2 .i-left .place { margin-top: .5em; font-size: clamp(22px, 3.9cqw, 42px); }
+  .info2 .i-left .rain2 { margin-top: .1em; margin-bottom: 0; }
+  .info2 .i-right { justify-content: center; }
+  .info2 .i-right .d-sub:first-child, .info2 .i-right .hit { font-size: clamp(20px, 3.1cqw, 34px); }
+  /* シルエット：背景と同じ紫系の影絵。下はふわっと消して、帯との境目に段差を作らない */
+  .decor .sky { aspect-ratio: 2400 / 700; height: auto; background: #0b0220; opacity: 1; z-index: 0;
+    -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 80%, transparent 100%), url(img/decor/skyline.png);
+    mask-image: linear-gradient(to bottom, #000 0%, #000 80%, transparent 100%), url(img/decor/skyline.png);
+    -webkit-mask-size: 100% 100%, 100% 100%; mask-size: 100% 100%, 100% 100%;
+    -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat;
+    -webkit-mask-composite: source-in; mask-composite: intersect; }
+
+  /* 「第2回」の看板（左のハロウィンの飾りと左右対称） */
+  .kv-dai2 { position: absolute; left: 89%; top: 79%; width: 15.5%; height: auto; transform: translate(-50%, -50%) rotate(4deg); z-index: 3; filter: drop-shadow(0 6px 8px rgba(0,0,0,.35)); }
+  /* 波の上に立つ飾り：位置と傾きは下のスクリプトが、波の形に合わせて決める */
+  .decor .dc[data-x] { transform-origin: 50% 100%; right: auto; }
+  @media (max-width: 700px) { .kv-dai2 { display: none; } }
+
+  /* ---- ひとこと：2行、日付と同じ高さから ---- */
+  .info2 { grid-template-columns: auto 1fr; margin-top: -45px; }
+  .info2 .i-right { justify-content: flex-start; padding: 0 0 0 2.6cqw; }
+  .info2 .i-right .hit, .info2 .i-right .d-sub:first-child { font-size: clamp(18px, 3.7cqw, 44px); white-space: nowrap; line-height: 1.5; margin-top: 0; }
+  .info2 .i-right .hit:first-child { margin-top: .25em; }
+  .gd-wrap { margin-top: 18px; }
+
+  /* ---- 星をちりばめる ---- */
+  .sprinkle { position: absolute; left: 50%; width: 100vw; margin-left: -50vw; top: 0; bottom: 0; z-index: -1; pointer-events: none; overflow: hidden; }
+  .sprinkle i { position: absolute; font-style: normal; line-height: 1; text-shadow: 0 0 8px currentColor; animation: tw 3s ease-in-out infinite; }
+  @media (max-width: 700px) { .sprinkle i:nth-child(n+20) { display: none; } }
+  .sprinkle.sp-top { top: -340px; bottom: auto; height: 340px; }
+
+  /* ---- ゲスト紹介：白い背景に十字の線、2×2 ---- */
+  #guests { background: #fff; color: #2a1055; margin-top: 40px; padding: 56px 0 56px; }
+  #guests .lead { color: #2a1055; }
+  .gquad { position: relative; display: grid; grid-template-columns: 1fr 1fr; max-width: 1040px; margin: 0 auto; }
+  .gquad::before, .gquad::after { content: ""; position: absolute; background: #2a1055; z-index: 1; }
+  .gquad::before { left: 50%; top: 0; bottom: 0; width: 2px; transform: translateX(-1px); }
+  .gquad::after { top: 50%; left: 0; right: 0; height: 2px; transform: translateY(-1px); }
+  .gq { padding: clamp(14px, 2.4vw, 30px) clamp(10px, 2vw, 26px) clamp(16px, 2.6vw, 34px); text-align: center; display: flex; flex-direction: column; align-items: center; }
+  .gq-from { font-weight: 800; font-size: clamp(14px, 1.7vw, 20px); letter-spacing: .08em; color: #2a1055; margin: 0 0 clamp(6px, 1vw, 12px); }
+  .gq-pic { width: 100%; height: clamp(220px, 30vw, 380px); display: flex; align-items: center; justify-content: center; }
+  .gq-pic img { max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain;
+    filter: drop-shadow(4px 0 0 #fff) drop-shadow(-4px 0 0 #fff) drop-shadow(0 4px 0 #fff) drop-shadow(0 -4px 0 #fff) drop-shadow(0 8px 10px rgba(42,16,85,.45)); }
+  .gq-name { font-family: var(--font-head); font-weight: 400; font-size: clamp(20px, 2.8vw, 34px); line-height: 1.3; color: #2a1055; margin: clamp(6px, 1vw, 12px) 0 0; word-break: keep-all; text-wrap: balance; }
+
+  /* ---- メニュー：ページのいちばん上、白い帯にシンプルに ---- */
+  .topnav { background: #fff; display: flex; flex-wrap: wrap; justify-content: center; gap: 4px clamp(14px, 3vw, 40px); padding: 12px 16px 10px; position: relative; z-index: 6; }
+  .topnav a { color: #2a1055; text-decoration: none; font-weight: 800; font-size: clamp(13px, 1.3vw, 16px); letter-spacing: .08em; padding: 6px 2px; border-bottom: 2px solid transparent; }
+  .topnav a:hover, .topnav a:focus-visible { border-bottom-color: #ff8a14; }
+  /* 旧メニューの跡の余白を詰める */
+  main > .wrap:first-child { display: none; }
+  #guests { margin-top: 0; }
+  /* ---- ゲストの見出し ---- */
+  .sg-title { text-align: center; margin: 0 0 clamp(18px, 3vw, 36px); line-height: 1.3; color: #2a1055; }
+  .sg-main { display: block; font-family: var(--font-head); font-weight: 400; font-size: clamp(18px, 3.3vw, 38px); }
+  .sg-en { display: block; margin-top: .2em; font-family: "Noto Sans JP", sans-serif; font-weight: 900; font-size: clamp(14px, 1.9vw, 24px); letter-spacing: .28em; color: #ff8a14; }
   @media (prefers-reduced-motion: reduce) {
     .collage img { animation: none; }
     html { scroll-behavior: auto; }
@@ -305,6 +586,9 @@
       <ellipse cx="30" cy="40" rx="5" ry="7" fill="#2a1055"/><ellipse cx="50" cy="40" rx="5" ry="7" fill="#2a1055"/>
       <ellipse cx="40" cy="55" rx="5" ry="4" fill="#2a1055"/>
     </symbol>
+    <symbol id="tree" viewBox="0 0 200 400">
+      <path d="M96 400 C92 330 98 290 92 240 C80 200 50 190 20 150 C40 160 62 166 82 188 C74 150 56 120 60 70 C70 100 84 124 94 156 C96 110 110 70 128 30 C124 80 118 120 114 170 C130 150 160 130 190 130 C160 150 130 176 116 214 C110 260 114 330 112 400Z"/>
+    </symbol>
     <symbol id="batshape" viewBox="0 0 100 50">
       <path d="M50 12 C46 4 42 4 40 10 C32 2 14 2 2 14 C12 12 18 16 22 24 C28 18 34 20 38 28 C42 22 46 24 50 34 C54 24 58 22 62 28 C66 20 72 18 78 24 C82 16 88 12 98 14 C86 2 68 2 60 10 C58 4 54 4 50 12Z"/>
     </symbol>
@@ -312,127 +596,132 @@
 </svg>
 
 <header class="hero" id="top">
-  <div class="moon" aria-hidden="true"></div>
-  <svg class="bat a" viewBox="0 0 100 50" aria-hidden="true"><use href="#batshape"/></svg>
-  <svg class="bat b" viewBox="0 0 100 50" aria-hidden="true"><use href="#batshape"/></svg>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <clipPath id="kvclip" clipPathUnits="objectBoundingBox"><path d="M0 0H1V.67H.85C.72 .67 .68 1 .55 1C.38 1 .30 .67 .15 .67H0Z"/></clipPath>
+    <clipPath id="gdclip" clipPathUnits="objectBoundingBox"><path d="M0 0H.12C.28 0 .44 .12 .62 .12C.80 .12 .86 0 1 0V.88H.88C.72 .88 .64 1 .5 1C.36 1 .28 .88 .12 .88H0Z"/></clipPath>
+  </svg>
+  <!-- 上：子どもたちの写真が、ゆっくり横に流れる（写真は仮） -->
+  <nav class="topnav" aria-label="ページ内の案内">
+    <a href="#guests">ゲスト</a><a href="#schedule">当日の流れ</a><a href="#song">歌の予習</a><a href="#join">参加のしかた</a><a href="#bar">バル</a><a href="#place">場所</a>
+  </nav>
+  <div class="kv">
+    <img class="kv-badge" src="img/decor/halloween.png" width="700" height="578" alt="" aria-hidden="true">
+    <img class="kv-dai2" src="img/decor/dai2.png" width="700" height="554" alt="第2回" >
+    <div class="kv-photo marq" role="img" aria-label="仮装を楽しむ子どもたちの写真（写真は仮）">
+      <div class="marq-track kids-track">
+        <div class="marq-set"><img src="img/kids-temp.jpg" width="1600" height="887" alt="仮装を楽しむ子どもたちの写真（写真は仮。十和の子どもの写真に差し替え予定）"><img src="img/kids-temp.jpg" width="1600" height="887" alt="仮装を楽しむ子どもたちの写真（写真は仮。十和の子どもの写真に差し替え予定）"><img src="img/kids-temp.jpg" width="1600" height="887" alt="仮装を楽しむ子どもたちの写真（写真は仮。十和の子どもの写真に差し替え予定）"></div>
+        <div class="marq-set" aria-hidden="true"><img src="img/kids-temp.jpg" width="1600" height="887" alt="" aria-hidden="true"><img src="img/kids-temp.jpg" width="1600" height="887" alt="" aria-hidden="true"><img src="img/kids-temp.jpg" width="1600" height="887" alt="" aria-hidden="true"></div>
+      </div>
+    </div>
+    <h1 class="title">
+      <span class="sr-only">第2回 とおわハロウィンパーティー 2026</span>
+      <svg class="ttl" viewBox="0 0 1600 760" aria-hidden="true">
+        <defs>
+          <path id="arc" d="M70 436 H260 C500 436 628 667 900 667 C1108 667 1172 436 1380 436 H1530"/>
+          <linearGradient id="gold" gradientUnits="userSpaceOnUse" x1="0" y1="380" x2="0" y2="640">
+            <stop offset="0" stop-color="#fff59a"/><stop offset=".45" stop-color="#ffd23a"/><stop offset="1" stop-color="#ff9a1a"/>
+          </linearGradient>
+        </defs>
+        <text class="t1"><textPath href="#arc" startOffset="50%" text-anchor="middle">とおわハロウィンパーティー<tspan class="yr">2026</tspan><animate attributeName="startOffset" from="165%" to="50%" dur="2.2s" begin="0s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines="0.16 0.8 0.2 1"/></textPath></text>
+        <text class="t2"><textPath href="#arc" startOffset="50%" text-anchor="middle">とおわハロウィンパーティー<tspan class="yr">2026</tspan><animate attributeName="startOffset" from="165%" to="50%" dur="2.2s" begin="0s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines="0.16 0.8 0.2 1"/></textPath></text>
+        <text class="t3"><textPath href="#arc" startOffset="50%" text-anchor="middle">とおわハロウィンパーティー<tspan class="yr">2026</tspan><animate attributeName="startOffset" from="165%" to="50%" dur="2.2s" begin="0s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines="0.16 0.8 0.2 1"/></textPath></text>
+      </svg>
+    </h1>
+  </div>
 
   <div class="wrap">
-    <p class="banner"><span class="nb"><span class="r">豪華ゲスト！</span></span><span class="nb">あの<span class="p">キャラ</span>が</span><span class="nb">やってくる♪</span></p>
-
-    <div class="collage">
-      <img class="c1" src="img/harima-yabashi.png" width="800" height="790" alt="はりまとやばし。赤い衣装で両手を上げる黒い頭の2人組">
-      <img class="c2" src="img/umanosuke.png" width="800" height="733" alt="うまのすけっぴ。オレンジ色と緑色のカッパのキャラクター2体">
-      <img class="c3" src="img/shishitou.png" width="800" height="788" alt="ししとう家族。ししとうの頭をかぶった3人家族">
-      <img class="c4" src="img/nobori.png" width="431" height="800" alt="のぼりん。カラフルなうろこのこいのぼりのキャラクター">
-      <svg class="pk l" viewBox="0 0 100 90" aria-hidden="true"><use href="#pumpkin"/></svg>
-      <svg class="pk r" viewBox="0 0 100 90" aria-hidden="true"><use href="#pumpkin"/></svg>
-    </div>
-
-    <h1 class="title">
-      <span class="row1"><span class="kai">第2回</span><span class="big toowa">とおわ</span></span>
-      <span class="big">ハロウィンパーティー</span>
-      <span class="big yr">2026</span>
-    </h1>
-
-    <div class="info">
-      <div class="card">
-        <span class="tag o">日時</span>
-        <p class="date-big">2026年<br><b>10月31日</b><span class="dow">土</span></p>
-        <p class="time-big">10:00〜16:00</p>
+    <div class="sprinkle" aria-hidden="true"><i style="left:32.7%;top:19.6%;font-size:26px;color:#ffd23a;animation-delay:-2.8s">★</i><i style="left:9.4%;top:43.6%;font-size:11px;color:#ffd23a;animation-delay:-1.3s">★</i><i style="left:6.8%;top:56.9%;font-size:11px;color:#ffb02e;animation-delay:-0.2s">★</i><i style="left:14.1%;top:43.7%;font-size:20px;color:#ffd23a;animation-delay:-1.3s">★</i><i style="left:19.4%;top:14.8%;font-size:26px;color:#ffd23a;animation-delay:-1.3s">★</i><i style="left:18.6%;top:76.2%;font-size:9px;color:#ffb02e;animation-delay:-2.1s">★</i><i style="left:8.2%;top:52.1%;font-size:11px;color:#fff6b0;animation-delay:-2.5s">★</i><i style="left:48.9%;top:9.5%;font-size:26px;color:#ffd23a;animation-delay:-0.7s">★</i><i style="left:93.6%;top:48.7%;font-size:26px;color:#ffd23a;animation-delay:-2.8s">★</i><i style="left:15.8%;top:21.9%;font-size:11px;color:#ffd23a;animation-delay:-3.0s">★</i><i style="left:82.4%;top:22.4%;font-size:13px;color:#ffd23a;animation-delay:-2.6s">★</i><i style="left:86.4%;top:91.7%;font-size:26px;color:#ffb02e;animation-delay:-1.8s">★</i><i style="left:40.1%;top:15.3%;font-size:26px;color:#ffffff;animation-delay:-2.8s">★</i><i style="left:7.6%;top:24.8%;font-size:11px;color:#ffd23a;animation-delay:-2.0s">★</i><i style="left:6.2%;top:6.0%;font-size:11px;color:#ffb02e;animation-delay:-2.7s">★</i><i style="left:36.6%;top:8.3%;font-size:11px;color:#ffb02e;animation-delay:-1.9s">★</i><i style="left:63.2%;top:92.0%;font-size:20px;color:#fff6b0;animation-delay:-1.6s">★</i><i style="left:12.3%;top:49.9%;font-size:16px;color:#ffffff;animation-delay:-1.5s">★</i><i style="left:9.4%;top:15.2%;font-size:13px;color:#fff6b0;animation-delay:-1.6s">★</i><i style="left:85.6%;top:68.7%;font-size:13px;color:#ffb02e;animation-delay:-1.9s">★</i><i style="left:17.4%;top:75.5%;font-size:20px;color:#ffb02e;animation-delay:-0.7s">★</i><i style="left:3.8%;top:8.5%;font-size:13px;color:#ffffff;animation-delay:-2.2s">★</i><i style="left:68.9%;top:92.1%;font-size:16px;color:#fff6b0;animation-delay:-0.1s">★</i><i style="left:21.0%;top:62.2%;font-size:20px;color:#ffd23a;animation-delay:-1.6s">★</i><i style="left:63.3%;top:13.8%;font-size:26px;color:#ffffff;animation-delay:-1.6s">★</i></div>
+    <div class="sprinkle sp-top" aria-hidden="true"><i style="left:1.3%;top:37.9%;font-size:20px;color:#ffffff;animation-delay:-2.8s">★</i><i style="left:98.8%;top:72.4%;font-size:16px;color:#ffb02e;animation-delay:-1.7s">★</i><i style="left:92.9%;top:5.2%;font-size:26px;color:#ffd23a;animation-delay:-2.6s">★</i><i style="left:21.4%;top:94.1%;font-size:26px;color:#ffb02e;animation-delay:-0.0s">★</i><i style="left:27.0%;top:81.4%;font-size:11px;color:#ffffff;animation-delay:-3.0s">★</i><i style="left:32.2%;top:95.1%;font-size:9px;color:#ffd23a;animation-delay:-1.0s">★</i><i style="left:62.4%;top:81.4%;font-size:13px;color:#fff6b0;animation-delay:-0.7s">★</i><i style="left:92.1%;top:26.1%;font-size:11px;color:#ffd23a;animation-delay:-0.2s">★</i><i style="left:16.7%;top:6.4%;font-size:20px;color:#ffd23a;animation-delay:-1.8s">★</i><i style="left:97.9%;top:93.4%;font-size:20px;color:#ffd23a;animation-delay:-0.4s">★</i><i style="left:25.2%;top:85.4%;font-size:11px;color:#ffb02e;animation-delay:-2.8s">★</i><i style="left:79.9%;top:75.7%;font-size:16px;color:#ffd23a;animation-delay:-0.5s">★</i><i style="left:6.1%;top:27.2%;font-size:13px;color:#ffd23a;animation-delay:-1.7s">★</i><i style="left:17.7%;top:9.5%;font-size:13px;color:#ffd23a;animation-delay:-0.0s">★</i><i style="left:25.7%;top:93.1%;font-size:20px;color:#ffffff;animation-delay:-2.9s">★</i><i style="left:21.8%;top:81.8%;font-size:11px;color:#fff6b0;animation-delay:-1.2s">★</i><i style="left:84.2%;top:31.9%;font-size:20px;color:#ffb02e;animation-delay:-2.2s">★</i><i style="left:68.2%;top:92.7%;font-size:9px;color:#fff6b0;animation-delay:-1.2s">★</i><i style="left:64.1%;top:83.1%;font-size:20px;color:#ffffff;animation-delay:-2.2s">★</i><i style="left:40.7%;top:93.1%;font-size:11px;color:#ffd23a;animation-delay:-2.6s">★</i><i style="left:8.0%;top:14.2%;font-size:13px;color:#ffd23a;animation-delay:-2.1s">★</i><i style="left:6.6%;top:90.3%;font-size:16px;color:#ffffff;animation-delay:-0.4s">★</i><i style="left:84.7%;top:24.9%;font-size:26px;color:#ffb02e;animation-delay:-2.1s">★</i><i style="left:31.3%;top:87.7%;font-size:13px;color:#ffb02e;animation-delay:-0.6s">★</i><i style="left:42.2%;top:84.6%;font-size:26px;color:#ffd23a;animation-delay:-1.1s">★</i><i style="left:80.2%;top:94.9%;font-size:20px;color:#ffb02e;animation-delay:-0.2s">★</i><i style="left:86.8%;top:9.6%;font-size:9px;color:#ffd23a;animation-delay:-1.0s">★</i><i style="left:5.1%;top:28.9%;font-size:20px;color:#ffffff;animation-delay:-0.8s">★</i><i style="left:62.9%;top:93.5%;font-size:9px;color:#ffd23a;animation-delay:-1.6s">★</i><i style="left:66.5%;top:83.7%;font-size:26px;color:#fff6b0;animation-delay:-2.3s">★</i><i style="left:61.2%;top:80.5%;font-size:26px;color:#ffd23a;animation-delay:-2.5s">★</i><i style="left:73.8%;top:95.4%;font-size:11px;color:#ffffff;animation-delay:-2.4s">★</i><i style="left:94.2%;top:33.3%;font-size:13px;color:#ffd23a;animation-delay:-0.3s">★</i><i style="left:10.7%;top:94.7%;font-size:11px;color:#ffd23a;animation-delay:-1.9s">★</i></div>
+    <div class="info2">
+      <div class="i-left">
+        <p class="d-big"><span class="yr">2026年</span><span class="gp">10<span class="u">月</span></span><span class="gp">31<span class="u">日</span><span class="u">(土)</span></span></p>
+        <p class="d-sub">10:00〜16:00</p>
+        <p class="d-sub place">十和地域振興局 駐車場</p>
+        <p class="d-sub rain2">※雨天時は役場ホール</p>
       </div>
-      <div class="card">
-        <span class="tag pu">場所</span>
-        <p class="place-big">十和地域振興局<br>駐車場</p>
-        <p class="rain">※雨天時は役場ホール</p>
-      </div>
-      <div class="card">
-        <span class="tag g">ひとこと</span>
-        <p class="hitokoto">どなたでも<em>参加OK</em>・<br><em>参加無料</em>・<em>申込不要</em></p>
+      <div class="i-right">
+        <p class="d-sub hit">どなたでも参加OK・参加無料</p>
+        <p class="d-sub hit">事前申込不要</p>
       </div>
     </div>
   </div>
-  <svg class="skyline" viewBox="0 0 400 60" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
-    <path d="M0 60 V40 H20 V28 L30 18 L40 28 V40 H60 V22 H64 V16 H70 V22 H74 V40 H100 L110 30 L120 40 H140 V32 H150 V10 L158 0 L166 10 V32 H180 V44 H210 V30 L222 18 L234 30 V44 H260 V34 H272 V24 L282 14 L292 24 V34 H310 V40 H340 V26 L350 16 L360 26 V40 H380 L390 30 L400 40 V60Z"/>
-  </svg>
+
+  <!-- 下：キャラクターの大きな枠が、ゆっくり横に流れる -->
+  <div class="gd-wrap">
+  <div class="decor" aria-hidden="true">
+    <div class="dc sky"></div>
+    <img class="dc castle" data-x="94" src="img/decor/castle.png" width="479" height="700" alt="" aria-hidden="true">
+    <img class="dc cat" data-x="4" src="img/decor/cat.png" width="316" height="467" alt="" aria-hidden="true">
+    <img class="dc p-stack" data-x="61" src="img/decor/pumpkin-stack.png" width="307" height="534" alt="" aria-hidden="true">
+    <img class="dc p1" data-x="14" src="img/decor/pumpkin1.png" width="594" height="484" alt="" aria-hidden="true">
+    <img class="dc g-bow" data-x="54" src="img/decor/ghost-bow.png" width="364" height="625" alt="" aria-hidden="true">
+    <img class="dc g-hat" data-x="69" src="img/decor/ghost-hat.png" width="347" height="525" alt="" aria-hidden="true">
+    <img class="dc p-hat" data-x="77" src="img/decor/pumpkin-hat.png" width="286" height="336" alt="" aria-hidden="true">
+    <img class="dc c1" src="img/decor/candy1.png" width="355" height="649" alt="" aria-hidden="true">
+    <img class="dc bat a" src="img/decor/bat1.png" width="700" height="290" alt="" aria-hidden="true">
+    <img class="dc bat b" src="img/decor/bat2.png" width="465" height="286" alt="" aria-hidden="true">
+    <img class="dc bat c" src="img/decor/bat1.png" width="700" height="290" alt="" aria-hidden="true">
+    <img class="dc web" src="img/decor/web.png" width="700" height="645" alt="" aria-hidden="true">
+    <img class="dc spider" src="img/decor/spider.png" width="212" height="469" alt="" aria-hidden="true">
+  </div>
+  <div class="gd-band">
+    <div class="marq">
+      <div class="marq-track gd-track">
+        <div class="marq-set">
+        <article class="pn"><div class="pn-photo"><img src="img/nobotake.png" width="1198" height="1300" alt="のぼりんとたけぽん。白いこいのぼりのキャラクターと、大根のキャラクターが並んでいる" style="--cx:48%;--cy:26%;--fx:50%;--fy:40%;--h:1.4"></div></article>
+        <article class="pn"><div class="pn-photo"><img src="img/hariyaba.png" width="1060" height="1300" alt="はりまとやばし。赤い衣装に黒い頭の2人組" style="--cx:45%;--cy:20%;--fx:50%;--fy:40%;--h:1.9"></div></article>
+        <article class="pn"><div class="pn-photo"><img src="img/umanosuke.png" width="800" height="733" alt="うまのすけっぴ。オレンジ色と緑色のカッパのキャラクター2体" style="--cx:44%;--cy:20%;--fx:50%;--fy:28%;--h:1.45"></div></article>
+        <article class="pn"><div class="pn-photo"><img src="img/shishitou.png" width="800" height="788" alt="ししとう家族。ししとうの頭をかぶった3人家族" style="--cx:50%;--cy:20%;--fx:50%;--fy:22%;--h:1.3"></div></article>
+        <article class="pn" aria-hidden="true"><div class="pn-photo"><img src="img/nobotake.png" width="1198" height="1300" alt="" aria-hidden="true" style="--cx:48%;--cy:26%;--fx:50%;--fy:40%;--h:1.4"></div></article>
+        <article class="pn" aria-hidden="true"><div class="pn-photo"><img src="img/hariyaba.png" width="1060" height="1300" alt="" aria-hidden="true" style="--cx:45%;--cy:20%;--fx:50%;--fy:40%;--h:1.9"></div></article>
+        <article class="pn" aria-hidden="true"><div class="pn-photo"><img src="img/umanosuke.png" width="800" height="733" alt="" aria-hidden="true" style="--cx:44%;--cy:20%;--fx:50%;--fy:28%;--h:1.45"></div></article>
+        <article class="pn" aria-hidden="true"><div class="pn-photo"><img src="img/shishitou.png" width="800" height="788" alt="" aria-hidden="true" style="--cx:50%;--cy:20%;--fx:50%;--fy:22%;--h:1.3"></div></article>
+        </div>
+        <div class="marq-set" aria-hidden="true">
+        <article class="pn" aria-hidden="true"><div class="pn-photo"><img src="img/nobotake.png" width="1198" height="1300" alt="" aria-hidden="true" style="--cx:48%;--cy:26%;--fx:50%;--fy:40%;--h:1.4"></div></article>
+        <article class="pn" aria-hidden="true"><div class="pn-photo"><img src="img/hariyaba.png" width="1060" height="1300" alt="" aria-hidden="true" style="--cx:45%;--cy:20%;--fx:50%;--fy:40%;--h:1.9"></div></article>
+        <article class="pn" aria-hidden="true"><div class="pn-photo"><img src="img/umanosuke.png" width="800" height="733" alt="" aria-hidden="true" style="--cx:44%;--cy:20%;--fx:50%;--fy:28%;--h:1.45"></div></article>
+        <article class="pn" aria-hidden="true"><div class="pn-photo"><img src="img/shishitou.png" width="800" height="788" alt="" aria-hidden="true" style="--cx:50%;--cy:20%;--fx:50%;--fy:22%;--h:1.3"></div></article>
+        <article class="pn" aria-hidden="true"><div class="pn-photo"><img src="img/nobotake.png" width="1198" height="1300" alt="" aria-hidden="true" style="--cx:48%;--cy:26%;--fx:50%;--fy:40%;--h:1.4"></div></article>
+        <article class="pn" aria-hidden="true"><div class="pn-photo"><img src="img/hariyaba.png" width="1060" height="1300" alt="" aria-hidden="true" style="--cx:45%;--cy:20%;--fx:50%;--fy:40%;--h:1.9"></div></article>
+        <article class="pn" aria-hidden="true"><div class="pn-photo"><img src="img/umanosuke.png" width="800" height="733" alt="" aria-hidden="true" style="--cx:44%;--cy:20%;--fx:50%;--fy:28%;--h:1.45"></div></article>
+        <article class="pn" aria-hidden="true"><div class="pn-photo"><img src="img/shishitou.png" width="800" height="788" alt="" aria-hidden="true" style="--cx:50%;--cy:20%;--fx:50%;--fy:22%;--h:1.3"></div></article>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
 </header>
 
 <main>
   <div class="wrap">
-    <nav class="jump" aria-label="ページ内の案内">
-      <a href="#guests">ゲスト</a>
-      <a href="#schedule">当日の流れ</a>
-      <a href="#song">歌の予習</a>
-      <a href="#join">参加のしかた</a>
-      <a href="#bar">バル</a>
-      <a href="#place">場所</a>
-    </nav>
   </div>
 
   <!-- ===== ゲスト紹介 ===== -->
   <section id="guests">
     <div class="wrap">
-      <div class="ribbon"><h2>ゲスト紹介</h2></div>
-      <p class="lead">地域のキャラたちが、十和にやってくる！</p>
+      <h2 class="sg-title"><span class="sg-main">あの！キャラたちが十和にやってくる！！！✨</span><span class="sg-en">SPECIAL GUEST</span></h2>
 
-      <div class="guests">
-        <article class="gcard">
-          <div class="gphoto two">
-            <img src="img/nobori.png" width="431" height="800" alt="のぼりん。カラフルなうろこのこいのぼりのキャラクター" loading="lazy">
-            <div class="frame tbd-box tbd-frame">たけぽん<br>写真準備中</div>
-          </div>
-          <div class="gbody">
-            <h3 class="gname">のぼりんとたけぽん</h3>
-            <p class="from"><small>出身地</small>十和</p>
-            <dl class="gdesc">
-              <dt>出し物</dt>
-              <dd>のんのんのぼりん　歌とダンス</dd>
-              <dt>たけぽんの紹介</dt>
-              <dd><span class="tbd">準備中</span></dd>
-            </dl>
-          </div>
+      <div class="gquad">
+        <article class="gq">
+          <p class="gq-from">生息地：十和</p>
+          <div class="gq-pic"><img src="img/nobotake.png" width="1198" height="1300" alt="のぼりんとたけぽん。白いこいのぼりのキャラクターと、大根のキャラクター" loading="lazy"></div>
+          <h3 class="gq-name">のぼりんとたけぽん</h3>
         </article>
-
-        <article class="gcard">
-          <div class="gphoto">
-            <img src="img/harima-yabashi.png" width="800" height="790" alt="はりまとやばし。赤い衣装で両手を上げる黒い頭の2人組" loading="lazy">
-          </div>
-          <div class="gbody">
-            <h3 class="gname">はりまとやばし</h3>
-            <p class="from"><small>出身地</small>高知市</p>
-            <dl class="gdesc">
-              <dt>出し物</dt>
-              <dd>おはしもダンス、リヤカー</dd>
-            </dl>
-          </div>
+        <article class="gq">
+          <p class="gq-from">生息地：高知市</p>
+          <div class="gq-pic"><img src="img/hariyaba.png" width="1060" height="1300" alt="はりまとやばし。赤い衣装に黒い頭の2人組" loading="lazy"></div>
+          <h3 class="gq-name">はりまとやばし</h3>
         </article>
-
-        <article class="gcard">
-          <div class="gphoto">
-            <img src="img/umanosuke.png" width="800" height="733" alt="うまのすけっぴ。オレンジ色と緑色のカッパのキャラクター2体" loading="lazy">
-          </div>
-          <div class="gbody">
-            <h3 class="gname">うまのすけっぴ</h3>
-            <p class="from"><small>出身地</small>海洋堂ホビー館四万十</p>
-            <div class="modes">
-              <span class="mode good">緑＝よいこモード</span>
-              <span class="mode bad">オレンジ＝わるさモード</span>
-            </div>
-            <p class="gdesc">四万十川を守るカッパの神さま。今日はどっちのモードで来るかな？</p>
-          </div>
+        <article class="gq">
+          <p class="gq-from">生息地：海洋堂ホビー館四万十</p>
+          <div class="gq-pic"><img src="img/umanosuke.png" width="800" height="733" alt="うまのすけっぴ。オレンジ色と緑色のカッパのキャラクター2体" loading="lazy"></div>
+          <h3 class="gq-name">うまのすけっぴ</h3>
         </article>
-
-        <article class="gcard">
-          <div class="gphoto">
-            <img src="img/shishitou.png" width="800" height="788" alt="ししとう家族。ししとうの頭をかぶった3人家族" loading="lazy">
-          </div>
-          <div class="gbody">
-            <h3 class="gname">ししとう家族</h3>
-            <p class="from"><small>出身地</small>三原村</p>
-            <dl class="gdesc">
-              <dt>出し物</dt>
-              <dd>ダンス</dd>
-            </dl>
-          </div>
+        <article class="gq">
+          <p class="gq-from">生息地：三原村</p>
+          <div class="gq-pic"><img src="img/shishitou.png" width="800" height="788" alt="ししとう家族。ししとうの頭をかぶった3人家族" loading="lazy"></div>
+          <h3 class="gq-name">ししとう家族</h3>
         </article>
       </div>
     </div>
@@ -643,5 +932,48 @@
   </div>
 </footer>
 
+<script>
+  // 「動きを減らす」設定の人には、タイトルをすぐ最終の位置に置く
+  if (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    document.querySelectorAll('.ttl animate').forEach(function (a) { a.remove(); });
+  }
+</script>
+
+<script>
+  // 飾りを、キャラの帯の上の波に沿って立たせる（位置と傾きを波の形から計算）
+  (function () {
+    var P1 = [[.12, 0], [.28, 0], [.44, .12], [.62, .12]];
+    var P2 = [[.62, .12], [.80, .12], [.86, 0], [1, 0]];
+    function bez(p, t, k) {
+      var u = 1 - t;
+      return u*u*u*p[0][k] + 3*u*u*t*p[1][k] + 3*u*t*t*p[2][k] + t*t*t*p[3][k];
+    }
+    function dbez(p, t, k) {
+      var u = 1 - t;
+      return 3*u*u*(p[1][k]-p[0][k]) + 6*u*t*(p[2][k]-p[1][k]) + 3*t*t*(p[3][k]-p[2][k]);
+    }
+    function wave(x) {
+      if (x <= .12) return { y: 0, s: 0 };
+      var p = x <= .62 ? P1 : P2, lo = 0, hi = 1, t = .5;
+      for (var i = 0; i < 30; i++) { t = (lo + hi) / 2; if (bez(p, t, 0) < x) lo = t; else hi = t; }
+      return { y: bez(p, t, 1), s: dbez(p, t, 1) / dbez(p, t, 0) };
+    }
+    function place() {
+      var band = document.querySelector('.gd-band');
+      if (!band) return;
+      var r = band.getBoundingClientRect(), W = r.width, H = r.height;
+      document.querySelectorAll('.decor .dc[data-x]').forEach(function (el) {
+        var x = parseFloat(el.getAttribute('data-x')) / 100, w = wave(x);
+        var ang = Math.atan((w.s * H) / W) * 180 / Math.PI;
+        el.style.left = (x * 100) + '%';
+        el.style.bottom = (-w.y * H) + 'px';
+        el.style.transform = 'translateX(-50%) rotate(' + ang.toFixed(2) + 'deg)';
+      });
+    }
+    window.addEventListener('load', place);
+    window.addEventListener('resize', place);
+    document.addEventListener('DOMContentLoaded', place);
+  })();
+</script>
 </body>
 </html>
