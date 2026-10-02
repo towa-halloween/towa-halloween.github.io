@@ -561,6 +561,37 @@
   .sg-title { text-align: center; margin: 0 0 clamp(18px, 3vw, 36px); line-height: 1.3; color: #2a1055; }
   .sg-main { display: block; font-family: var(--font-head); font-weight: 400; font-size: clamp(18px, 3.3vw, 38px); }
   .sg-en { display: block; margin-top: .2em; font-family: "Noto Sans JP", sans-serif; font-weight: 900; font-size: clamp(14px, 1.9vw, 24px); letter-spacing: .28em; color: #ff8a14; }
+
+  /* ================= スマホ幅（〜700px） ================= */
+  .ttl-m { display: none; }
+  .ttl-m text { font-size: 80px; }
+  .ttl-m .t3 { fill: url(#goldM); }
+  .ttl-m .t3 .yr { fill: #fff; }
+  @media (max-width: 700px) {
+    .ttl-d { display: none; }
+    .ttl-m { display: block; }
+    /* メニューは一段 */
+    .topnav { flex-wrap: nowrap; justify-content: center; gap: 0 clamp(8px, 2.6vw, 14px); padding: 10px 6px 8px; }
+    .topnav a { font-size: clamp(10.5px, 3.1vw, 13px); letter-spacing: .02em; white-space: nowrap; padding: 6px 1px; }
+    /* 写真とタイトル：大きく、2段 */
+    .kv { aspect-ratio: 800 / 700; }
+    .kv-photo { height: 100%; clip-path: url(#kvclipM); }
+    .kv-badge, .kv-dai2, .sprinkle.sp-top { display: none; }
+    /* 日時・場所・ひとこと：すっきり縦並び */
+    .info2 { display: block; margin-top: -26px; padding: 0 22px 8px; }
+    .info2 .i-left, .info2 .i-right { padding: 0; border: 0; display: block; }
+    .info2 .d-big { font-size: 9.6cqw; white-space: nowrap; }
+    .info2 .d-sub { font-size: 5.2cqw; line-height: 1.6; margin-top: .1em; white-space: normal; }
+    .info2 .i-left .d-sub:nth-of-type(1) { font-size: 5.6cqw; }
+    .info2 .place { margin-top: .55em; font-size: 6cqw; }
+    .info2 .rain2 { font-size: 3.9cqw; margin: 0 0 .6em; }
+    .info2 .i-right .hit { font-size: 5.2cqw; margin-top: 0; white-space: nowrap; }
+    .info2 .i-right .hit:first-child { margin-top: 0; }
+    /* 流れるキャラの枠：小さく */
+    .gd-wrap { margin-top: 10px; }
+    .gd-band .pn { width: 60vw; height: 74vw; }
+    .gd-band .pn-photo img { }
+  }
   @media (prefers-reduced-motion: reduce) {
     .collage img { animation: none; }
     html { scroll-behavior: auto; }
@@ -598,6 +629,7 @@
 <header class="hero" id="top">
   <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
     <clipPath id="kvclip" clipPathUnits="objectBoundingBox"><path d="M0 0H1V.67H.85C.72 .67 .68 1 .55 1C.38 1 .30 .67 .15 .67H0Z"/></clipPath>
+    <clipPath id="kvclipM" clipPathUnits="objectBoundingBox"><path d="M0 0H1V.7429H.85C.725 .7429 .675 .8429 .55 .8429C.375 .8429 .3 .7429 .15 .7429H0Z"/></clipPath>
     <clipPath id="gdclip" clipPathUnits="objectBoundingBox"><path d="M0 0H.12C.28 0 .44 .12 .62 .12C.80 .12 .86 0 1 0V.88H.88C.72 .88 .64 1 .5 1C.36 1 .28 .88 .12 .88H0Z"/></clipPath>
   </svg>
   <!-- 上：子どもたちの写真が、ゆっくり横に流れる（写真は仮） -->
@@ -615,7 +647,7 @@
     </div>
     <h1 class="title">
       <span class="sr-only">第2回 とおわハロウィンパーティー 2026</span>
-      <svg class="ttl" viewBox="0 0 1600 760" aria-hidden="true">
+      <svg class="ttl ttl-d" viewBox="0 0 1600 760" aria-hidden="true">
         <defs>
           <path id="arc" d="M70 436 H260 C500 436 628 667 900 667 C1108 667 1172 436 1380 436 H1530"/>
           <linearGradient id="gold" gradientUnits="userSpaceOnUse" x1="0" y1="380" x2="0" y2="640">
@@ -625,6 +657,17 @@
         <text class="t1"><textPath href="#arc" startOffset="50%" text-anchor="middle">とおわハロウィンパーティー<tspan class="yr">2026</tspan><animate attributeName="startOffset" from="165%" to="50%" dur="2.2s" begin="0s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines="0.16 0.8 0.2 1"/></textPath></text>
         <text class="t2"><textPath href="#arc" startOffset="50%" text-anchor="middle">とおわハロウィンパーティー<tspan class="yr">2026</tspan><animate attributeName="startOffset" from="165%" to="50%" dur="2.2s" begin="0s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines="0.16 0.8 0.2 1"/></textPath></text>
         <text class="t3"><textPath href="#arc" startOffset="50%" text-anchor="middle">とおわハロウィンパーティー<tspan class="yr">2026</tspan><animate attributeName="startOffset" from="165%" to="50%" dur="2.2s" begin="0s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines="0.16 0.8 0.2 1"/></textPath></text>
+      </svg>
+      <svg class="ttl ttl-m" viewBox="0 0 800 700" aria-hidden="true">
+        <defs>
+          <path id="arcM1" d="M20 350 H120 C240 350 300 420 440 420 C540 420 580 350 680 350 H780"/>
+          <path id="arcM2" d="M20 452 H120 C240 452 300 522 440 522 C540 522 580 452 680 452 H780"/>
+          <linearGradient id="goldM" gradientUnits="userSpaceOnUse" x1="0" y1="300" x2="0" y2="600">
+            <stop offset="0" stop-color="#fff59a"/><stop offset=".45" stop-color="#ffd23a"/><stop offset="1" stop-color="#ff9a1a"/>
+          </linearGradient>
+        </defs>
+        <text class="t1"><textPath href="#arcM1" startOffset="50%" text-anchor="middle">とおわハロウィン<animate attributeName="startOffset" from="170%" to="50%" dur="2.2s" begin="0s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines="0.16 0.8 0.2 1"/></textPath></text><text class="t2"><textPath href="#arcM1" startOffset="50%" text-anchor="middle">とおわハロウィン<animate attributeName="startOffset" from="170%" to="50%" dur="2.2s" begin="0s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines="0.16 0.8 0.2 1"/></textPath></text><text class="t3"><textPath href="#arcM1" startOffset="50%" text-anchor="middle">とおわハロウィン<animate attributeName="startOffset" from="170%" to="50%" dur="2.2s" begin="0s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines="0.16 0.8 0.2 1"/></textPath></text>
+        <text class="t1"><textPath href="#arcM2" startOffset="50%" text-anchor="middle">パーティー<tspan class="yr">2026</tspan><animate attributeName="startOffset" from="170%" to="50%" dur="2.2s" begin="0s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines="0.16 0.8 0.2 1"/></textPath></text><text class="t2"><textPath href="#arcM2" startOffset="50%" text-anchor="middle">パーティー<tspan class="yr">2026</tspan><animate attributeName="startOffset" from="170%" to="50%" dur="2.2s" begin="0s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines="0.16 0.8 0.2 1"/></textPath></text><text class="t3"><textPath href="#arcM2" startOffset="50%" text-anchor="middle">パーティー<tspan class="yr">2026</tspan><animate attributeName="startOffset" from="170%" to="50%" dur="2.2s" begin="0s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines="0.16 0.8 0.2 1"/></textPath></text>
       </svg>
     </h1>
   </div>
