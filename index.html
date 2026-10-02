@@ -521,8 +521,7 @@
   .kv-dai2 { position: absolute; left: 89%; top: 79%; width: 15.5%; height: auto; transform: translate(-50%, -50%) rotate(4deg); z-index: 3; filter: drop-shadow(0 6px 8px rgba(0,0,0,.35)); }
   /* 波の上に立つ飾り：位置と傾きは下のスクリプトが、波の形に合わせて決める */
   .decor .dc[data-x] { transform-origin: 50% 100%; right: auto; }
-  @media (max-width: 700px) { .kv-dai2 { display: none; } }
-
+  
   /* ---- ひとこと：2行、日付と同じ高さから ---- */
   .info2 { grid-template-columns: auto 1fr; margin-top: -45px; }
   .info2 .i-right { justify-content: flex-start; padding: 0 0 0 2.6cqw; }
@@ -560,7 +559,7 @@
   /* ---- ゲストの見出し ---- */
   .sg-title { text-align: center; margin: 0 0 clamp(18px, 3vw, 36px); line-height: 1.3; color: #2a1055; }
   .sg-main { display: block; font-family: var(--font-head); font-weight: 400; font-size: clamp(18px, 3.3vw, 38px); }
-  .sg-en { display: block; margin-top: .2em; font-family: "Noto Sans JP", sans-serif; font-weight: 900; font-size: clamp(14px, 1.9vw, 24px); letter-spacing: .28em; color: #ff8a14; }
+  .sg-en { display: block; margin-top: .25em; font-family: "Noto Sans JP", sans-serif; font-weight: 900; font-size: clamp(20px, 3.2vw, 40px); letter-spacing: .24em; color: #ff8a14; }
 
   /* ================= スマホ幅（〜700px） ================= */
   .ttl-m { display: none; }
@@ -576,7 +575,8 @@
     /* 写真とタイトル：大きく、2段 */
     .kv { aspect-ratio: 800 / 700; }
     .kv-photo { height: 100%; clip-path: url(#kvclipM); }
-    .kv-badge, .kv-dai2, .sprinkle.sp-top { display: none; }
+    .kv-badge, .sprinkle.sp-top { display: none; }
+    .kv-dai2 { display: block; left: 83%; top: 90%; width: 27%; transform: translate(-50%, -50%) rotate(4deg); }
     /* 日時・場所・ひとこと：すっきり縦並び */
     .info2 { display: block; margin-top: -26px; padding: 0 22px 8px; }
     .info2 .i-left, .info2 .i-right { padding: 0; border: 0; display: block; }
@@ -592,6 +592,18 @@
     .gd-band .pn { width: 60vw; height: 74vw; }
     .gd-band .pn-photo img { }
   }
+
+  .sg-main { text-wrap: balance; }
+  /* ---- ゲストたちが、それぞれ軽く動く ---- */
+  .gq-pic img { animation: gq-sway 5.2s ease-in-out infinite; will-change: transform; }
+  .gq:nth-child(2) .gq-pic img { animation-name: gq-bob; animation-duration: 3.8s; animation-delay: -1s; }
+  .gq:nth-child(3) .gq-pic img { animation-name: gq-wiggle; animation-duration: 4.6s; animation-delay: -2s; }
+  .gq:nth-child(4) .gq-pic img { animation-name: gq-drift; animation-duration: 6.2s; animation-delay: -3s; }
+  @keyframes gq-sway { 0%,100% { transform: translateX(-9px); } 50% { transform: translateX(9px); } }
+  @keyframes gq-bob { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-12px); } }
+  @keyframes gq-wiggle { 0%,100% { transform: rotate(-2.5deg); } 50% { transform: rotate(2.5deg); } }
+  @keyframes gq-drift { 0%,100% { transform: translate(-7px, 5px); } 25% { transform: translate(7px, 5px); } 50% { transform: translate(7px, -7px); } 75% { transform: translate(-7px, -7px); } }
+  @media (prefers-reduced-motion: reduce) { .gq-pic img { animation: none; } }
   @media (prefers-reduced-motion: reduce) {
     .collage img { animation: none; }
     html { scroll-behavior: auto; }
@@ -743,7 +755,7 @@
   <!-- ===== ゲスト紹介 ===== -->
   <section id="guests">
     <div class="wrap">
-      <h2 class="sg-title"><span class="sg-main">あの！キャラたちが十和にやってくる！！！✨</span><span class="sg-en">SPECIAL GUEST</span></h2>
+      <h2 class="sg-title"><span class="sg-main">やば！あのキャラたちが十和にやってくる！！！</span><span class="sg-en">SPECIAL GUEST</span></h2>
 
       <div class="gquad">
         <article class="gq">
