@@ -604,6 +604,7 @@
   @keyframes gq-wiggle { 0%,100% { transform: rotate(-2.5deg); } 50% { transform: rotate(2.5deg); } }
   @keyframes gq-drift { 0%,100% { transform: translate(-7px, 5px); } 25% { transform: translate(7px, 5px); } 50% { transform: translate(7px, -7px); } 75% { transform: translate(-7px, -7px); } }
   @media (prefers-reduced-motion: reduce) { .gq-pic img { animation: none; } }
+
   @media (prefers-reduced-motion: reduce) {
     .collage img { animation: none; }
     html { scroll-behavior: auto; }
@@ -646,7 +647,7 @@
   </svg>
   <!-- 上：子どもたちの写真が、ゆっくり横に流れる（写真は仮） -->
   <nav class="topnav" aria-label="ページ内の案内">
-    <a href="#guests">ゲスト</a><a href="#schedule">当日の流れ</a><a href="#song">歌の予習</a><a href="#join">参加のしかた</a><a href="#bar">バル</a><a href="#place">場所</a>
+    <a href="#guests">ゲスト</a><a href="#schedule">当日の流れ</a><a href="#join">参加のしかた</a><a href="#song">歌の予習</a><a href="#bar">バル</a><a href="#place">場所</a>
   </nav>
   <div class="kv">
     <img class="kv-badge" src="img/decor/halloween.png" width="700" height="578" alt="" aria-hidden="true">
@@ -789,21 +790,15 @@
 
       <ol class="sched">
         <li class="row">
-          <div class="time t0">9:00<small>〜10:00</small></div>
+          <div class="time t1">10:00</div>
           <div class="what">
-            <h3>着替え</h3>
+            <h3>受付＆着替え</h3>
+            <p>お菓子カードと、仮装グランプリの番号札をお渡しします（10:30まで）。途中からの参加もOK！</p>
             <p>着替えたい人は役場で着替えられます。おうちで仮装して来てもOK！</p>
           </div>
         </li>
         <li class="row">
-          <div class="time t1">10:00</div>
-          <div class="what">
-            <h3>受付</h3>
-            <p>お菓子カードと、仮装グランプリの番号札をお渡しします（10:30まで）。途中からの参加もOK！</p>
-          </div>
-        </li>
-        <li class="row">
-          <div class="time t2">10:30</div>
+          <div class="time t2">10:45</div>
           <div class="what">
             <h3>オープニング</h3>
             <p>司会のあいさつ・紹介のあと、地元有志のコーラスがきゃりーぱみゅぱみゅの曲を歌います。</p>
@@ -833,11 +828,11 @@
             <div class="flow tbd-box">
               <span class="tbd">ステージの出し物（予定）</span>
               <ul>
-                <li>はりまとやばし：おはしもダンス・リヤカー</li>
+                <li>はりまとやばし：おはしもダンス</li>
                 <li>モンスターを引き当てろ！巨大くじ引き</li>
                 <li>ししとう家族：ダンス</li>
                 <li>椅子取りゲーム</li>
-                <li>のぼりんとたけぽん：ダンス</li>
+                <li>のぼりんとたけぽん：オリジナルダンス初披露</li>
               </ul>
             </div>
           </div>
@@ -860,23 +855,6 @@
     </div>
   </section>
 
-  <!-- ===== オープニングの歌を予習しよう ===== -->
-  <section id="song">
-    <div class="wrap">
-      <div class="ribbon"><h2>オープニングの歌を予習しよう</h2></div>
-      <div class="song">
-        <p>オープニングでは、地元有志のコーラスがきゃりーぱみゅぱみゅの曲を歌います。いっしょに歌えるように、予習しておいてね。</p>
-        <p class="meta">曲名：きゃりーぱみゅぱみゅ「Crazy Party Night 〜ぱんぷきんの逆襲〜」</p>
-
-        <!-- YOUTUBE_URL https://www.youtube.com/watch?v=2bJ49dOSP9o -->
-        <div class="yt">
-          <iframe src="https://www.youtube-nocookie.com/embed/2bJ49dOSP9o" title="きゃりーぱみゅぱみゅ「Crazy Party Night 〜ぱんぷきんの逆襲〜」" loading="lazy"
-            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- ===== 参加のしかた ===== -->
   <section id="join">
     <div class="wrap">
@@ -890,7 +868,7 @@
           <div class="cards2">
             <div class="mini">
               <h4>お菓子カード</h4>
-              <p>中学生以下の人が対象です（未就学児も含みます）。<span class="tbd">先着〇名</span>、なくなり次第終了です。</p>
+              <p>中学生以下の人が対象です（未就学児も含みます）。先着86名、なくなり次第終了です。</p>
             </div>
             <div class="mini">
               <h4>仮装グランプリの番号札</h4>
@@ -910,10 +888,27 @@
 
         <div class="panel">
           <h3>着替えたい人は</h3>
-          <p>おうちで仮装して来てもOK！会場で着替えたい人は、役場で着替えられます（9:00〜10:00）。</p>
+          <p>おうちで仮装して来てもOK！会場で着替えたい人は、役場で着替えられます。</p>
           <ul>
             <li>着替えの部屋・荷物の置き場：<span class="tbd">準備中</span></li>
           </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== オープニングの歌を予習しよう ===== -->
+  <section id="song">
+    <div class="wrap">
+      <div class="ribbon"><h2>オープニングの歌を予習しよう</h2></div>
+      <div class="song">
+        <p>オープニングでは、地元有志のコーラスがきゃりーぱみゅぱみゅの曲を歌います。いっしょに歌えるように、予習しておいてね。</p>
+        <p class="meta">曲名：きゃりーぱみゅぱみゅ「Crazy Party Night 〜ぱんぷきんの逆襲〜」</p>
+
+        <!-- YOUTUBE_URL https://www.youtube.com/watch?v=2bJ49dOSP9o -->
+        <div class="yt">
+          <iframe src="https://www.youtube-nocookie.com/embed/2bJ49dOSP9o" title="きゃりーぱみゅぱみゅ「Crazy Party Night 〜ぱんぷきんの逆襲〜」" loading="lazy"
+            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
         </div>
       </div>
     </div>
