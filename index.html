@@ -899,6 +899,40 @@
     section { overflow-x: clip; }
   }
 
+
+  /* 各タイトルの裏のスカイライン（お城・木・かぼちゃの影の連なり） */
+  .ribbon-sky-wrap {
+    position: absolute;
+    left: 50%;
+    bottom: -15px;
+    transform: translateX(-50%);
+    width: clamp(520px, 94vw, 960px);
+    height: 115px; /* 上のカードに被らないよう高さを最適化 */
+    background: radial-gradient(ellipse at 50% 90%, rgba(140, 65, 225, 0.6) 0%, rgba(85, 30, 150, 0.35) 55%, transparent 75%);
+    pointer-events: none;
+    z-index: 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    overflow: hidden; /* 上の要素への侵食を防止 */
+    border-radius: 0 0 16px 16px;
+  }
+  .ribbon-skyline {
+    width: 100%;
+    height: auto;
+    display: block;
+    opacity: .95;
+    filter: drop-shadow(0 0 1px rgba(255, 220, 80, 0.3));
+  }
+
+  @media (max-width: 700px) {
+    .ribbon-sky-wrap {
+      width: 125vw;
+      height: 85px;
+      bottom: -10px;
+    }
+  }
+
 </style>
 </head>
 <body>
@@ -1133,6 +1167,9 @@
     </div>
     <div class="wrap">
       <div class="ribbon">
+        <div class="ribbon-sky-wrap" aria-hidden="true">
+          <img class="ribbon-skyline" src="img/decor/skyline.png" alt="">
+        </div>
         <div class="ribbon-decor rd-sched" aria-hidden="true">
           <img class="rd-item rd-bat" src="img/decor/bat1.png" alt="">
           <img class="rd-item rd-ghost" src="img/decor/ghost-hat.png" alt="">
@@ -1224,6 +1261,9 @@
     </div>
     <div class="wrap">
       <div class="ribbon">
+        <div class="ribbon-sky-wrap" aria-hidden="true">
+          <img class="ribbon-skyline" src="img/decor/skyline.png" alt="">
+        </div>
         <div class="ribbon-decor rd-join" aria-hidden="true">
           <img class="rd-item rd-candy" src="img/decor/candy1.png" alt="">
           <img class="rd-item rd-pumpkin" src="img/decor/pumpkin-hat.png" alt="">
@@ -1281,6 +1321,9 @@
     </div>
     <div class="wrap">
       <div class="ribbon">
+        <div class="ribbon-sky-wrap" aria-hidden="true">
+          <img class="ribbon-skyline" src="img/decor/skyline.png" alt="">
+        </div>
         <div class="ribbon-decor rd-song" aria-hidden="true">
           <img class="rd-item rd-ghost" src="img/decor/ghost-bow.png" alt="">
           <img class="rd-item rd-bat" src="img/decor/bat2.png" alt="">
@@ -1313,6 +1356,9 @@
     </div>
     <div class="wrap">
       <div class="ribbon">
+        <div class="ribbon-sky-wrap" aria-hidden="true">
+          <img class="ribbon-skyline" src="img/decor/skyline.png" alt="">
+        </div>
         <div class="ribbon-decor rd-bar" aria-hidden="true">
           <img class="rd-item rd-pstack" src="img/decor/pumpkin-stack.png" alt="">
           <img class="rd-item rd-cat" src="img/decor/cat.png" alt="">
@@ -1339,6 +1385,9 @@
     </div>
     <div class="wrap">
       <div class="ribbon">
+        <div class="ribbon-sky-wrap" aria-hidden="true">
+          <img class="ribbon-skyline" src="img/decor/skyline.png" alt="">
+        </div>
         <div class="ribbon-decor rd-place" aria-hidden="true">
           <img class="rd-item rd-web" src="img/decor/web.png" alt="">
           <img class="rd-item rd-ghost" src="img/decor/ghost-big.png" alt="">
@@ -1373,6 +1422,9 @@
   <section id="request">
     <div class="wrap">
       <div class="ribbon">
+        <div class="ribbon-sky-wrap" aria-hidden="true">
+          <img class="ribbon-skyline" src="img/decor/skyline.png" alt="">
+        </div>
         <div class="ribbon-decor rd-request" aria-hidden="true">
           <img class="rd-item rd-pumpkin" src="img/decor/pumpkin1.png" alt="">
           <img class="rd-item rd-bat" src="img/decor/bat2.png" alt="">
