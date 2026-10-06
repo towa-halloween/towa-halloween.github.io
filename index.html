@@ -666,6 +666,239 @@
   }
   @media (prefers-reduced-motion: reduce) { .nd-item { animation: none !important; } }
 
+
+  /* =========================================================
+     ハロウィン装飾：タイトル背後の隙間 & PC左右の紫バック
+     ========================================================= */
+  .ribbon {
+    position: relative;
+    text-align: center;
+    margin-bottom: 22px;
+    filter: drop-shadow(0 4px 0 rgba(42,16,85,.6));
+  }
+  .ribbon h2 {
+    position: relative;
+    z-index: 2; /* 文字は装飾の手前 */
+  }
+
+  /* タイトル背後・隙間の装飾コンテナ */
+  .ribbon-decor {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1; /* リボンの背後・隙間から顔を出す */
+    overflow: visible;
+  }
+  .rd-item {
+    position: absolute;
+    display: block;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,.45));
+  }
+  .rd-star {
+    position: absolute;
+    font-style: normal;
+    display: inline-block;
+    line-height: 1;
+    text-shadow: 0 0 6px currentColor;
+    animation: tw 2.4s ease-in-out infinite;
+  }
+
+  /* アニメーション */
+  @keyframes rd-float {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-7px) rotate(4deg); }
+  }
+  @keyframes rd-sway {
+    0%, 100% { transform: rotate(-8deg); }
+    50% { transform: rotate(10deg); }
+  }
+  @keyframes rd-bat {
+    0%, 100% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-5px) scale(1.05); }
+  }
+
+  /* --- 各セクションのリボン背後・隙間配置 --- */
+  /* 1. 当日の流れ（リボンの左右肩・背後にぴったり配置） */
+  .rd-sched .rd-bat {
+    left: calc(50% - 118px); top: -16px; width: 32px;
+    animation: rd-bat 3.5s ease-in-out infinite;
+  }
+  .rd-sched .rd-ghost {
+    right: calc(50% - 115px); top: -22px; width: 36px;
+    animation: rd-float 4.2s ease-in-out infinite -1.2s;
+  }
+  .rd-sched .s1 { left: calc(50% - 135px); top: 8px; font-size: 12px; color: #ffd23a; animation-delay: -0.4s; }
+  .rd-sched .s2 { right: calc(50% - 70px); top: -26px; font-size: 11px; color: #fff6b0; animation-delay: -1.8s; }
+  .rd-sched .s3 { right: calc(50% - 130px); top: 12px; font-size: 14px; color: #ffb02e; animation-delay: -1.1s; }
+
+  /* 2. 参加のしかた（リボンの左右肩・背後） */
+  .rd-join .rd-candy {
+    left: calc(50% - 124px); top: -12px; width: 26px;
+    animation: rd-sway 3s ease-in-out infinite;
+  }
+  .rd-join .rd-pumpkin {
+    right: calc(50% - 124px); top: -16px; width: 35px;
+    animation: rd-float 3.8s ease-in-out infinite -0.6s;
+  }
+  .rd-join .s1 { left: calc(50% - 75px); top: -22px; font-size: 12px; color: #ff6bb5; animation-delay: -0.8s; }
+  .rd-join .s2 { right: calc(50% - 135px); top: 12px; font-size: 13px; color: #ffd23a; animation-delay: -2.0s; }
+  .rd-join .s3 { left: calc(50% - 138px); top: 14px; font-size: 10px; color: #ffffff; animation-delay: -1.4s; }
+
+  /* 3. オープニングの歌を予習しよう */
+  .rd-song .rd-ghost {
+    left: calc(50% - 105px); top: -28px; width: 32px;
+    animation: rd-float 4.5s ease-in-out infinite -1.8s;
+  }
+  .rd-song .rd-bat {
+    right: calc(50% - 105px); top: -24px; width: 30px;
+    animation: rd-bat 3.2s ease-in-out infinite -0.5s;
+  }
+  .rd-song .s1 { left: calc(50% - 50px); top: -24px; font-size: 13px; color: #ffd23a; animation-delay: -0.2s; }
+  .rd-song .s2 { right: calc(50% - 50px); top: -24px; font-size: 11px; color: #fff6b0; animation-delay: -1.5s; }
+  .rd-song .s3 { left: 50%; transform: translateX(-50%); top: -24px; font-size: 14px; color: #ff8a14; animation-delay: -2.3s; }
+
+  /* 4. バル（文字が2文字と短いので左右に広めの配置） */
+  .rd-bar .rd-pstack {
+    left: calc(50% - 105px); top: -18px; width: 38px;
+    animation: rd-float 4s ease-in-out infinite;
+  }
+  .rd-bar .rd-cat {
+    right: calc(50% - 105px); top: -14px; width: 34px;
+    animation: rd-float 3.6s ease-in-out infinite -1.5s;
+  }
+  .rd-bar .rd-candy {
+    right: calc(50% - 135px); top: 8px; width: 22px;
+    animation: rd-sway 2.8s ease-in-out infinite -0.8s;
+  }
+  .rd-bar .s1 { left: calc(50% - 125px); top: 14px; font-size: 14px; color: #ffd23a; animation-delay: -1.2s; }
+  .rd-bar .s2 { right: calc(50% - 60px); top: -22px; font-size: 12px; color: #fff6b0; animation-delay: -0.7s; }
+
+  /* 5. 場所・駐車場・雨の日 */
+  .rd-place .rd-web {
+    left: calc(50% - 130px); top: -24px; width: 38px; opacity: .85;
+  }
+  .rd-place .rd-ghost {
+    right: calc(50% - 125px); top: -20px; width: 34px;
+    animation: rd-float 4.4s ease-in-out infinite -2.0s;
+  }
+  .rd-place .rd-bat {
+    left: calc(50% - 80px); top: -26px; width: 28px;
+    animation: rd-bat 3.6s ease-in-out infinite -1.0s;
+  }
+  .rd-place .s1 { right: calc(50% - 80px); top: -24px; font-size: 13px; color: #ffd23a; animation-delay: -0.3s; }
+  .rd-place .s2 { right: calc(50% - 140px); top: 12px; font-size: 11px; color: #ff6bb5; animation-delay: -1.7s; }
+
+  /* 6. お願い */
+  .rd-request .rd-pumpkin {
+    left: calc(50% - 120px); top: -18px; width: 32px;
+    animation: rd-float 3.8s ease-in-out infinite;
+  }
+  .rd-request .rd-bat {
+    right: calc(50% - 120px); top: -16px; width: 30px;
+    animation: rd-bat 3.4s ease-in-out infinite -1.2s;
+  }
+  .rd-request .s1 { left: calc(50% - 70px); top: -22px; font-size: 12px; color: #ffd23a; animation-delay: -0.9s; }
+
+  /* =========================================================
+     【PC専用】左右の紫バックの余白を彩る装飾 (.pc-side-decor)
+     ========================================================= */
+  .pc-side-decor {
+    display: none; /* スマホでは非表示 */
+  }
+
+  @media (min-width: 701px) {
+    /* PCでは左右の装飾を表示 */
+    .pc-side-decor {
+      display: block;
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 1;
+      overflow: visible;
+    }
+    .psd-item {
+      position: absolute;
+      filter: drop-shadow(0 4px 8px rgba(0,0,0,.45));
+    }
+    .psd-star {
+      position: absolute;
+      font-style: normal;
+      display: inline-block;
+      line-height: 1;
+      text-shadow: 0 0 8px currentColor;
+      animation: tw 2.5s ease-in-out infinite;
+    }
+
+    /* 各セクションの左右配置（wrap幅960pxの外側） */
+    /* 当日の流れ */
+    #schedule .psd-l1 { left: calc(50% - 560px); top: 60px; width: 75px; animation: rd-float 4.2s ease-in-out infinite; }
+    #schedule .psd-l2 { left: calc(50% - 540px); top: 280px; width: 62px; animation: rd-bat 3.8s ease-in-out infinite -1s; }
+    #schedule .psd-l3 { left: calc(50% - 565px); top: 480px; width: 45px; animation: rd-sway 3.2s ease-in-out infinite -2s; }
+    #schedule .psd-r1 { right: calc(50% - 560px); top: 80px; width: 65px; animation: rd-float 4.6s ease-in-out infinite -1.5s; }
+    #schedule .psd-r2 { right: calc(50% - 550px); top: 320px; width: 70px; animation: rd-float 3.9s ease-in-out infinite -0.5s; }
+    #schedule .psd-r3 { right: calc(50% - 560px); top: 540px; width: 58px; animation: rd-bat 4.1s ease-in-out infinite -2.2s; }
+    #schedule .psd-l4 { left: calc(50% - 555px); top: 760px; width: 62px; animation: rd-float 3.7s ease-in-out infinite -1.4s; }
+    #schedule .psd-r4 { right: calc(50% - 550px); top: 740px; width: 48px; animation: rd-sway 2.9s ease-in-out infinite -0.9s; }
+    #schedule .psd-sl1 { left: calc(50% - 520px); top: 160px; font-size: 20px; color: #ffd23a; animation-delay: -0.6s; }
+    #schedule .psd-sl2 { left: calc(50% - 575px); top: 380px; font-size: 15px; color: #fff6b0; animation-delay: -1.9s; }
+    #schedule .psd-sl3 { left: calc(50% - 530px); top: 580px; font-size: 22px; color: #ffb02e; animation-delay: -1.1s; }
+    #schedule .psd-sl4 { left: calc(50% - 535px); top: 840px; font-size: 18px; color: #ffd23a; animation-delay: -2.0s; }
+    #schedule .psd-sr1 { right: calc(50% - 530px); top: 200px; font-size: 18px; color: #ffd23a; animation-delay: -1.4s; }
+    #schedule .psd-sr2 { right: calc(50% - 570px); top: 420px; font-size: 24px; color: #ff6bb5; animation-delay: -2.3s; }
+    #schedule .psd-sr3 { right: calc(50% - 525px); top: 620px; font-size: 14px; color: #ffffff; animation-delay: -0.8s; }
+    #schedule .psd-sr4 { right: calc(50% - 530px); top: 820px; font-size: 20px; color: #ffb02e; animation-delay: -0.5s; }
+
+    /* 参加のしかた */
+    #join .psd-l1 { left: calc(50% - 560px); top: 70px; width: 65px; animation: rd-float 3.8s ease-in-out infinite; }
+    #join .psd-l2 { left: calc(50% - 550px); top: 250px; width: 72px; animation: rd-float 4.4s ease-in-out infinite -1.2s; }
+    #join .psd-r1 { right: calc(50% - 560px); top: 60px; width: 78px; animation: rd-float 4.2s ease-in-out infinite -1.8s; }
+    #join .psd-r2 { right: calc(50% - 550px); top: 240px; width: 55px; animation: rd-sway 3.5s ease-in-out infinite -0.7s; }
+    #join .psd-sl1 { left: calc(50% - 535px); top: 150px; font-size: 22px; color: #ffd23a; animation-delay: -1.5s; }
+    #join .psd-sl2 { left: calc(50% - 570px); top: 320px; font-size: 16px; color: #fff6b0; animation-delay: -0.4s; }
+    #join .psd-sr1 { right: calc(50% - 530px); top: 140px; font-size: 18px; color: #ffb02e; animation-delay: -2.1s; }
+    #join .psd-sr2 { right: calc(50% - 575px); top: 310px; font-size: 20px; color: #ffd23a; animation-delay: -0.9s; }
+
+    /* オープニングの歌 */
+    #song .psd-l1 { left: calc(50% - 560px); top: 60px; width: 80px; opacity: .85; }
+    #song .psd-r1 { right: calc(50% - 555px); top: 70px; width: 68px; animation: rd-float 4.3s ease-in-out infinite -1.4s; }
+    #song .psd-sl1 { left: calc(50% - 530px); top: 180px; font-size: 18px; color: #ffd23a; animation-delay: -1.7s; }
+    #song .psd-sr1 { right: calc(50% - 530px); top: 190px; font-size: 22px; color: #ff8a14; animation-delay: -0.5s; }
+
+    /* バル */
+    #bar .psd-l1 { left: calc(50% - 550px); top: 50px; width: 66px; animation: rd-float 4s ease-in-out infinite -1s; }
+    #bar .psd-r1 { right: calc(50% - 550px); top: 50px; width: 62px; animation: rd-float 3.7s ease-in-out infinite -0.6s; }
+    #bar .psd-sl1 { left: calc(50% - 525px); top: 140px; font-size: 20px; color: #ffd23a; animation-delay: -2.2s; }
+    #bar .psd-sr1 { right: calc(50% - 525px); top: 130px; font-size: 16px; color: #fff6b0; animation-delay: -1.0s; }
+
+    /* 場所 */
+    #place .psd-l1 { left: calc(50% - 560px); top: 60px; width: 75px; opacity: .8; }
+    #place .psd-r1 { right: calc(50% - 555px); top: 70px; width: 70px; animation: rd-float 4.5s ease-in-out infinite -1.6s; }
+    #place .psd-sl1 { left: calc(50% - 530px); top: 180px; font-size: 18px; color: #ffd23a; animation-delay: -1.3s; }
+    #place .psd-sr1 { right: calc(50% - 530px); top: 190px; font-size: 20px; color: #ff6bb5; animation-delay: -0.7s; }
+  }
+
+  /* 画面幅が1140px未満のPC時：左右装飾を画面端に寄せる */
+  @media (min-width: 701px) and (max-width: 1140px) {
+    #schedule .psd-l1, #schedule .psd-l2, #schedule .psd-l3,
+    #join .psd-l1, #join .psd-l2,
+    #song .psd-l1, #bar .psd-l1, #place .psd-l1 { left: 8px !important; opacity: .75; }
+
+    #schedule .psd-r1, #schedule .psd-r2, #schedule .psd-r3,
+    #join .psd-r1, #join .psd-r2,
+    #song .psd-r1, #bar .psd-r1, #place .psd-r1 { right: 8px !important; opacity: .75; }
+
+    .psd-star { display: none !important; }
+  }
+
+  /* スマホ時（<= 700px）の挙動調整 */
+  @media (max-width: 700px) {
+    /* トップ日時エリア：梟さんの指示「スマホで見ためは、日時のところは前回のままでいい。今は入れすぎ。」 */
+    .night-decor { display: none !important; }
+
+    /* 各セクションの横スクロール防止 */
+    section { overflow-x: clip; }
+  }
+
 </style>
 </head>
 <body>
@@ -877,8 +1110,38 @@
 
   <!-- ===== 当日の流れ ===== -->
   <section id="schedule">
+    <div class="pc-side-decor" aria-hidden="true">
+      <img class="psd-item psd-l1" src="img/decor/ghost-hat.png" alt="">
+      <img class="psd-item psd-l2" src="img/decor/bat1.png" alt="">
+      <img class="psd-item psd-l3" src="img/decor/candy1.png" alt="">
+      <span class="psd-star psd-sl1">★</span>
+      <span class="psd-star psd-sl2">★</span>
+      <span class="psd-star psd-sl3">★</span>
+      <img class="psd-item psd-r1" src="img/decor/pumpkin-stack.png" alt="">
+      <img class="psd-item psd-r2" src="img/decor/cat.png" alt="">
+      <img class="psd-item psd-r3" src="img/decor/bat2.png" alt="">
+      <img class="psd-item psd-l4" src="img/decor/pumpkin1.png" alt="">
+      <img class="psd-item psd-r4" src="img/decor/candy3.png" alt="">
+      <span class="psd-star psd-sl1">★</span>
+      <span class="psd-star psd-sl2">★</span>
+      <span class="psd-star psd-sl3">★</span>
+      <span class="psd-star psd-sl4">★</span>
+      <span class="psd-star psd-sr1">★</span>
+      <span class="psd-star psd-sr2">★</span>
+      <span class="psd-star psd-sr3">★</span>
+      <span class="psd-star psd-sr4">★</span>
+    </div>
     <div class="wrap">
-      <div class="ribbon"><h2>当日の流れ</h2></div>
+      <div class="ribbon">
+        <div class="ribbon-decor rd-sched" aria-hidden="true">
+          <img class="rd-item rd-bat" src="img/decor/bat1.png" alt="">
+          <img class="rd-item rd-ghost" src="img/decor/ghost-hat.png" alt="">
+          <span class="rd-star s1">★</span>
+          <span class="rd-star s2">★</span>
+          <span class="rd-star s3">★</span>
+        </div>
+        <h2>当日の流れ</h2>
+      </div>
 
       <ol class="sched">
         <li class="row">
@@ -949,8 +1212,27 @@
 
   <!-- ===== 参加のしかた ===== -->
   <section id="join">
+    <div class="pc-side-decor" aria-hidden="true">
+      <img class="psd-item psd-l1" src="img/decor/cat.png" alt="">
+      <img class="psd-item psd-l2" src="img/decor/pumpkin1.png" alt="">
+      <span class="psd-star psd-sl1">★</span>
+      <span class="psd-star psd-sl2">★</span>
+      <img class="psd-item psd-r1" src="img/decor/ghost-bow.png" alt="">
+      <img class="psd-item psd-r2" src="img/decor/candy2.png" alt="">
+      <span class="psd-star psd-sr1">★</span>
+      <span class="psd-star psd-sr2">★</span>
+    </div>
     <div class="wrap">
-      <div class="ribbon"><h2>参加のしかた</h2></div>
+      <div class="ribbon">
+        <div class="ribbon-decor rd-join" aria-hidden="true">
+          <img class="rd-item rd-candy" src="img/decor/candy1.png" alt="">
+          <img class="rd-item rd-pumpkin" src="img/decor/pumpkin-hat.png" alt="">
+          <span class="rd-star s1">★</span>
+          <span class="rd-star s2">★</span>
+          <span class="rd-star s3">★</span>
+        </div>
+        <h2>参加のしかた</h2>
+      </div>
       <p class="lead">申込はいりません。そのまま来てね！</p>
 
       <div class="steps">
@@ -991,8 +1273,23 @@
 
   <!-- ===== オープニングの歌を予習しよう ===== -->
   <section id="song">
+    <div class="pc-side-decor" aria-hidden="true">
+      <img class="psd-item psd-l1" src="img/decor/web.png" alt="">
+      <span class="psd-star psd-sl1">★</span>
+      <img class="psd-item psd-r1" src="img/decor/ghost-big.png" alt="">
+      <span class="psd-star psd-sr1">★</span>
+    </div>
     <div class="wrap">
-      <div class="ribbon"><h2>オープニングの歌を予習しよう</h2></div>
+      <div class="ribbon">
+        <div class="ribbon-decor rd-song" aria-hidden="true">
+          <img class="rd-item rd-ghost" src="img/decor/ghost-bow.png" alt="">
+          <img class="rd-item rd-bat" src="img/decor/bat2.png" alt="">
+          <span class="rd-star s1">★</span>
+          <span class="rd-star s2">★</span>
+          <span class="rd-star s3">★</span>
+        </div>
+        <h2>オープニングの歌を予習しよう</h2>
+      </div>
       <div class="song">
         <p>オープニングでは、地元有志のコーラスがきゃりーぱみゅぱみゅの曲を歌います。いっしょに歌えるように、予習しておいてね。</p>
         <p class="meta">曲名：きゃりーぱみゅぱみゅ「Crazy Party Night 〜ぱんぷきんの逆襲〜」</p>
@@ -1008,8 +1305,23 @@
 
   <!-- ===== バル ===== -->
   <section id="bar">
+    <div class="pc-side-decor" aria-hidden="true">
+      <img class="psd-item psd-l1" src="img/decor/pumpkin-stack.png" alt="">
+      <span class="psd-star psd-sl1">★</span>
+      <img class="psd-item psd-r1" src="img/decor/cat.png" alt="">
+      <span class="psd-star psd-sr1">★</span>
+    </div>
     <div class="wrap">
-      <div class="ribbon"><h2>バル</h2></div>
+      <div class="ribbon">
+        <div class="ribbon-decor rd-bar" aria-hidden="true">
+          <img class="rd-item rd-pstack" src="img/decor/pumpkin-stack.png" alt="">
+          <img class="rd-item rd-cat" src="img/decor/cat.png" alt="">
+          <img class="rd-item rd-candy" src="img/decor/candy2.png" alt="">
+          <span class="rd-star s1">★</span>
+          <span class="rd-star s2">★</span>
+        </div>
+        <h2>バル</h2>
+      </div>
       <div class="bar">
         <p class="toast">出店いろいろ。<br>お昼からカンパイ！</p>
         <p class="caution"><b>お酒は20歳になってから。</b><br>車を運転する人は、飲まないでね。</p>
@@ -1019,8 +1331,23 @@
 
   <!-- ===== 場所・駐車場・雨の日 ===== -->
   <section id="place">
+    <div class="pc-side-decor" aria-hidden="true">
+      <img class="psd-item psd-l1" src="img/decor/web.png" alt="">
+      <span class="psd-star psd-sl1">★</span>
+      <img class="psd-item psd-r1" src="img/decor/ghost-hat.png" alt="">
+      <span class="psd-star psd-sr1">★</span>
+    </div>
     <div class="wrap">
-      <div class="ribbon"><h2>場所・駐車場・雨の日</h2></div>
+      <div class="ribbon">
+        <div class="ribbon-decor rd-place" aria-hidden="true">
+          <img class="rd-item rd-web" src="img/decor/web.png" alt="">
+          <img class="rd-item rd-ghost" src="img/decor/ghost-big.png" alt="">
+          <img class="rd-item rd-bat" src="img/decor/bat1.png" alt="">
+          <span class="rd-star s1">★</span>
+          <span class="rd-star s2">★</span>
+        </div>
+        <h2>場所・駐車場・雨の日</h2>
+      </div>
       <div class="place-grid">
         <div class="panel">
           <dl>
@@ -1045,7 +1372,14 @@
   <!-- ===== お願い ===== -->
   <section id="request">
     <div class="wrap">
-      <div class="ribbon"><h2>お願い</h2></div>
+      <div class="ribbon">
+        <div class="ribbon-decor rd-request" aria-hidden="true">
+          <img class="rd-item rd-pumpkin" src="img/decor/pumpkin1.png" alt="">
+          <img class="rd-item rd-bat" src="img/decor/bat2.png" alt="">
+          <span class="rd-star s1">★</span>
+        </div>
+        <h2>お願い</h2>
+      </div>
       <div class="panel">
         <h3>写真の撮影・掲載について</h3>
         <p><span class="tbd">準備中</span></p>
@@ -1117,5 +1451,15 @@
     document.addEventListener('DOMContentLoaded', place);
   })();
 </script>
-</body>
+<script>
+window.addEventListener('load', () => {
+  const ids = ['schedule', 'join', 'song', 'bar', 'place'];
+  const res = {};
+  ids.forEach(id => {
+    const el = document.getElementById(id);
+    if (el) res[id] = el.getBoundingClientRect().top + window.scrollY;
+  });
+  document.title = 'OFFSET:' + JSON.stringify(res);
+});
+</script></body>
 </html>
