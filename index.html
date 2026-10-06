@@ -962,6 +962,187 @@
       height: auto;
     }
   }
+
+  /* ===== フォトギャラリーセクション（トップ同様：枠なし・仕切りなし・全幅3分割） ===== */
+  #gallery {
+    padding-top: 68px;
+    padding-bottom: 0;
+    position: relative;
+    text-align: center;
+    overflow-x: clip;
+  }
+
+  /* トップ同様：画面幅いっぱいの枠なし・仕切りなしフォトバナー */
+  .gallery-hero {
+    position: relative;
+    width: 100%;
+    height: 480px;
+    margin-top: 24px;
+    background: #15062e;
+    overflow: hidden;
+  }
+  /* 上下のぼうっと溶け込むフェードグラデーション（切れない雰囲気） */
+  .gallery-hero::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 50px;
+    background: linear-gradient(to bottom, rgba(17, 5, 38, 0.95), transparent);
+    z-index: 4;
+    pointer-events: none;
+  }
+  .gallery-hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 55px;
+    background: linear-gradient(to top, rgba(17, 5, 38, 0.98), transparent);
+    z-index: 4;
+    pointer-events: none;
+  }
+
+  .gh-track {
+    display: flex;
+    width: 100%;
+    height: 100%;
+  }
+  .gh-panel {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+    min-width: 0; /* flexはみ出し防止 */
+    border: none; /* 仕切りなし */
+  }
+  .gh-left {
+    flex: 33 1 0;
+    background: radial-gradient(circle at 50% 50%, #2a0e54 0%, #170733 100%);
+  }
+  .gh-center {
+    flex: 34 1 0;
+    background: #1c0840;
+    position: relative;
+  }
+  .gh-right {
+    flex: 33 1 0;
+    background: radial-gradient(circle at 50% 50%, #2a0e54 0%, #170733 100%);
+  }
+
+  /* 中央の写真（枠なし・仕切りなし） */
+  .gh-center .gh-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 12%;
+    display: block;
+    transition: transform .5s ease;
+  }
+  .gh-center:hover .gh-img {
+    transform: scale(1.03);
+  }
+
+  /* 左右の準備中プレースホルダー（仕切りなし） */
+  .gh-cs-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 16px 8px;
+    gap: 8px;
+    color: #ffd866;
+    text-align: center;
+    box-sizing: border-box;
+    width: 100%;
+  }
+  .gh-cs-icon {
+    font-size: 46px;
+    filter: drop-shadow(0 4px 12px rgba(0,0,0,.6));
+    animation: rd-float 3.5s ease-in-out infinite;
+  }
+  .gh-left .gh-cs-icon { animation-delay: -0.6s; }
+  .gh-right .gh-cs-icon { animation-delay: -1.9s; }
+  .gh-cs-title {
+    font-family: var(--font-head);
+    font-size: 20px;
+    letter-spacing: .06em;
+    margin: 0;
+    color: #fff;
+    text-shadow: 0 2px 8px rgba(0,0,0,.8);
+    white-space: nowrap;
+  }
+  .gh-cs-sub {
+    font-size: 13px;
+    color: #ffdc88;
+    font-weight: 700;
+    margin: 0;
+    white-space: nowrap;
+  }
+
+  /* 3枚の写真の上に乗るオーバーレイテキスト */
+  .gh-overlay-text {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 22px;
+    z-index: 6;
+    pointer-events: none;
+    display: flex;
+    justify-content: center;
+    padding: 0 16px;
+    box-sizing: border-box;
+  }
+  .gh-sub-badge {
+    background: rgba(22, 6, 46, 0.86);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 2px solid rgba(255, 215, 80, 0.75);
+    border-radius: 40px;
+    padding: 10px 28px;
+    color: #ffe072;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: .04em;
+    text-shadow: 0 2px 4px rgba(0,0,0,.9);
+    box-shadow: 0 8px 24px rgba(0,0,0,.7), 0 0 16px rgba(255, 215, 80, 0.25);
+    margin: 0;
+    max-width: 92%;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  /* ギャラリー用の左右装飾 */
+  #gallery .psd-l1 { left: clamp(24px, 3.5vw, 85px); top: 50px; width: 75px; animation: rd-float 4.2s ease-in-out infinite; }
+  #gallery .psd-r1 { right: clamp(24px, 3.5vw, 85px); top: 50px; width: 75px; animation: rd-float 3.8s ease-in-out infinite -1.2s; }
+  #gallery .psd-sl1 { left: clamp(30px, 4.5vw, 90px); top: 160px; font-size: 20px; color: #ffd23a; animation-delay: -1.0s; }
+  #gallery .psd-sr1 { right: clamp(30px, 4.5vw, 90px); top: 160px; font-size: 20px; color: #ffb02e; animation-delay: -2.0s; }
+
+  /* ギャラリーリボンの背後装飾 */
+  .rd-gallery .rd-ghost { left: calc(50% - 150px); top: -20px; width: 34px; animation: rd-float 4s ease-in-out infinite; }
+  .rd-gallery .rd-pumpkin { right: calc(50% - 150px); top: -16px; width: 32px; animation: rd-sway 3.5s ease-in-out infinite -1s; }
+  .rd-gallery .s1 { left: calc(50% - 170px); top: -12px; font-size: 14px; color: #ffd23a; }
+  .rd-gallery .s2 { right: calc(50% - 170px); top: -12px; font-size: 16px; color: #ffb02e; }
+
+  @media (max-width: 700px) {
+    #gallery { padding-top: 52px; }
+    .gallery-hero { height: 290px; margin-top: 18px; }
+    .gallery-hero::before { height: 32px; }
+    .gallery-hero::after { height: 40px; }
+    .gh-overlay-text { bottom: 12px; padding: 0 6px; }
+    .gh-sub-badge {
+      font-size: clamp(9.5px, 2.7vw, 11px);
+      padding: 5px 10px;
+      border-radius: 20px;
+      max-width: 98%;
+    }
+    .gh-cs-content { padding: 8px 2px; gap: 4px; }
+    .gh-cs-icon { font-size: 24px; }
+    .gh-cs-title { font-size: 11px; letter-spacing: .02em; }
+    .gh-cs-sub { font-size: 9px; }
+    .rd-gallery .rd-ghost { left: calc(50% - 110px); top: -14px; width: 26px; }
+    .rd-gallery .rd-pumpkin { right: calc(50% - 110px); top: -12px; width: 24px; }
+    .rd-gallery .s1 { left: calc(50% - 125px); font-size: 12px; }
+    .rd-gallery .s2 { right: calc(50% - 125px); font-size: 12px; }
+  }
 </style>
 </head>
 <body>
@@ -1476,6 +1657,60 @@
       <div class="panel">
         <h3>写真の撮影・掲載について</h3>
         <p><span class="tbd">準備中</span></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== フォトギャラリー（みんなも仮装して来てね！） ===== -->
+  <section id="gallery">
+    <div class="pc-side-decor" aria-hidden="true">
+      <img class="psd-item psd-l1" src="img/decor/ghost-hat.png" alt="">
+      <span class="psd-star psd-sl1">★</span>
+      <img class="psd-item psd-r1" src="img/decor/pumpkin-stack.png" alt="">
+      <span class="psd-star psd-sr1">★</span>
+    </div>
+    <div class="wrap">
+      <div class="ribbon">
+        <div class="ribbon-sky-wrap" aria-hidden="true">
+          <img class="ribbon-skyline" src="img/decor/skyline.png" alt="">
+        </div>
+        <div class="ribbon-decor rd-gallery" aria-hidden="true">
+          <img class="rd-item rd-ghost" src="img/decor/ghost-hat.png" alt="">
+          <img class="rd-item rd-pumpkin" src="img/decor/pumpkin-hat.png" alt="">
+          <span class="rd-star s1">★</span>
+          <span class="rd-star s2">★</span>
+        </div>
+        <h2>みんなも仮装して来てね！</h2>
+      </div>
+    </div>
+
+    <!-- トップ画像同様：枠なし・仕切りなしの全幅3分割フォトバナー -->
+    <div class="gallery-hero">
+      <div class="gh-track">
+        <!-- 左：準備中 -->
+        <div class="gh-panel gh-left">
+          <div class="gh-cs-content">
+            <span class="gh-cs-icon">👻</span>
+            <p class="gh-cs-title">COMING SOON</p>
+            <p class="gh-cs-sub">写真準備中…★</p>
+          </div>
+        </div>
+        <!-- 中央：かぼちゃマントのお子さん（枠なし・仕切りなし） -->
+        <div class="gh-panel gh-center">
+          <img class="gh-img" src="img/kids-pumpkin.jpg" alt="かぼちゃマントの仮装キッズ">
+        </div>
+        <!-- 右：準備中 -->
+        <div class="gh-panel gh-right">
+          <div class="gh-cs-content">
+            <span class="gh-cs-icon">🍬</span>
+            <p class="gh-cs-title">COMING SOON</p>
+            <p class="gh-cs-sub">写真準備中…★</p>
+          </div>
+        </div>
+      </div>
+      <!-- 3枚の写真の上に乗るオーバーレイテキスト -->
+      <div class="gh-overlay-text">
+        <p class="gh-sub-badge">昨年の参加者スナップ！お気に入りの衣装で遊びに来てね🎃</p>
       </div>
     </div>
   </section>
