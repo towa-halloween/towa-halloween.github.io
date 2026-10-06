@@ -605,6 +605,18 @@
   @keyframes gq-drift { 0%,100% { transform: translate(-7px, 5px); } 25% { transform: translate(7px, 5px); } 50% { transform: translate(7px, -7px); } 75% { transform: translate(-7px, -7px); } }
   @media (prefers-reduced-motion: reduce) { .gq-pic img { animation: none; } }
 
+
+  /* ---- 上の写真：3枚を並べて見せる（一旦の差し替え。止まっている） ---- */
+  .kp-row { display: flex; }
+  .kp { position: relative; overflow: hidden; flex: 27 1 0; min-width: 0; }
+  .kp.mid { flex: 46 1 0; }
+  .kp img { position: absolute; left: 50%; height: calc(var(--sc, 1.2) * 100%); width: auto; max-width: none; transform: translateX(-50%); }
+  .kp img.top { top: 0; } .kp img.bot { bottom: 0; }
+
+  /* 顔のアップ：顔の中心を、枠の上から約38%の所に置く */
+  .kp-a { flex: 38 1 0; } .kp-b { flex: 31 1 0; } .kp-c { flex: 31 1 0; }
+  .kp img.face { top: calc((.38 - var(--fy) * var(--sc)) * 100%); left: calc(var(--fx) * 100%); transform: translateX(calc(var(--fx) * -100%)); }
+  @media (max-width: 700px) { .kp-c { display: none; } .kp-a { flex: 56 1 0; } .kp-b { flex: 44 1 0; } .kp img.face { --sc: 1.5; } }
   @media (prefers-reduced-motion: reduce) {
     .collage img { animation: none; }
     html { scroll-behavior: auto; }
@@ -652,11 +664,10 @@
   <div class="kv">
     <img class="kv-badge" src="img/decor/halloween.png" width="700" height="578" alt="" aria-hidden="true">
     <img class="kv-dai2" src="img/decor/dai2.png" width="700" height="554" alt="第2回" >
-    <div class="kv-photo marq" role="img" aria-label="仮装を楽しむ子どもたちの写真（写真は仮）">
-      <div class="marq-track kids-track">
-        <div class="marq-set"><img src="img/kids-temp.jpg" width="1600" height="887" alt="仮装を楽しむ子どもたちの写真（写真は仮。十和の子どもの写真に差し替え予定）"><img src="img/kids-temp.jpg" width="1600" height="887" alt="仮装を楽しむ子どもたちの写真（写真は仮。十和の子どもの写真に差し替え予定）"><img src="img/kids-temp.jpg" width="1600" height="887" alt="仮装を楽しむ子どもたちの写真（写真は仮。十和の子どもの写真に差し替え予定）"></div>
-        <div class="marq-set" aria-hidden="true"><img src="img/kids-temp.jpg" width="1600" height="887" alt="" aria-hidden="true"><img src="img/kids-temp.jpg" width="1600" height="887" alt="" aria-hidden="true"><img src="img/kids-temp.jpg" width="1600" height="887" alt="" aria-hidden="true"></div>
-      </div>
+    <div class="kv-photo kp-row" role="img" aria-label="仮装を楽しむ子どもたちの写真（仮）">
+      <div class="kp kp-a"><img class="top" src="img/kids-ghost.jpg" width="975" height="1300" alt="" style="--sc:1.2"></div>
+      <div class="kp kp-b"><img class="face" src="img/kids-toddler.jpg" width="975" height="1300" alt="" style="--sc:2.1;--fx:.51;--fy:.49"></div>
+      <div class="kp kp-c"><img class="bot" src="img/kids-chain.jpg" width="976" height="1300" alt="" style="--sc:1.25"></div>
     </div>
     <h1 class="title">
       <span class="sr-only">第2回 とおわハロウィンパーティー 2026</span>
