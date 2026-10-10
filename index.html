@@ -1056,6 +1056,8 @@
     transform: scale(1.03);
   }
 
+  .gh-left .gh-img { width: 100%; height: 100%; object-fit: cover; object-position: 30% 22%; display: block; transform: translateY(-6%) scale(1.85); transform-origin: 26% 40%; transition: transform .5s ease; }
+  .gh-left:hover .gh-img { transform: translateY(-6%) scale(1.9); }
   /* 左右の準備中プレースホルダー（仕切りなし） */
   .gh-cs-content {
     display: flex;
@@ -1719,13 +1721,9 @@
     <!-- トップ画像同様：枠なし・仕切りなしの全幅3分割フォトバナー -->
     <div class="gallery-hero">
       <div class="gh-track">
-        <!-- 左：準備中 -->
+        <!-- 左：仮装した犬（枠なし・仕切りなし） -->
         <div class="gh-panel gh-left">
-          <div class="gh-cs-content">
-            <span class="gh-cs-icon">👻</span>
-            <p class="gh-cs-title">COMING SOON</p>
-            <p class="gh-cs-sub">写真準備中…★</p>
-          </div>
+          <img class="gh-img" src="img/dog-hat.jpg" alt="かぼちゃの飾りをつけた仮装の犬">
         </div>
         <!-- 中央：かぼちゃマントのお子さん（枠なし・仕切りなし） -->
         <div class="gh-panel gh-center">
